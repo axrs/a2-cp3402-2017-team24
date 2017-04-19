@@ -1,6 +1,7 @@
 @charset 'utf-8';
 
 @import 'settings';
+@import 'custom-settings';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -50,9 +51,9 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import './components/revealCard';
+@import './components/reveal-card';
+@import './components/qualifications';
 
 @import './components/footer';
 @import './components/index';
 @import './components/staff';
-@import './components/qualifications';

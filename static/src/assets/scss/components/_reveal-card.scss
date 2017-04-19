@@ -1,10 +1,4 @@
-/* ---------- _revealCard.scss ---------- */
-$image-hover-wrapper-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-$image-hover-wrapper-transition-delay: 0.25s;
-$image-hover-wrapper-banner-width: 100%;
-$image-hover-wrapper-banner-topspace: 25%;
-$image-hover-wrapper-banner-bg: rgba($primary-color, 0.8);
-$image-hover-wrapper-icon-size: 24px;
+/* ---------- _reveal-card.scss ---------- */
 
 .image.card {
     height: 400px;
@@ -61,6 +55,7 @@ $image-hover-wrapper-icon-size: 24px;
     width: 100%;
     transition: $image-hover-wrapper-transition;
     padding: 1rem;
+    font-size: rem-calc(16);
 }
 
 .image.card a .reveal:hover h1 {
@@ -80,6 +75,7 @@ $image-hover-wrapper-icon-size: 24px;
     width: 100%;
     transition: $image-hover-wrapper-transition;
     padding: 1rem;
+    font-size: rem-calc(25);
 }
 
 .image.card a img {
