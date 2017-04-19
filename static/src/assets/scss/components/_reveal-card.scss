@@ -10,11 +10,8 @@ $image-hover-reveal-z-index: 80;
 $image-hover-title-z-index: $image-hover-reveal-z-index - 1;
 $image-hover-title-min-height: 25%;
 
+$image-hover-content-offset-left: 0;
 $image-hover-heading-offset-top: 50%;
-$image-hover-heading-offset-left: 0;
-
-$image-hover-content-offset-bottom: 0;
-$image-hover-content-offset-left: $image-hover-heading-offset-left;
 
 $card-height: 400px;
 
@@ -65,7 +62,7 @@ $card-height: 400px;
 
 .image.card a .reveal h1 {
     top: $image-hover-heading-offset-top;
-    left: $image-hover-heading-offset-left;
+    left: $image-hover-content-offset-left;
     display: block;
     opacity: $alpha-opaque;
     position: absolute;
@@ -84,7 +81,7 @@ $card-height: 400px;
 }
 
 .image.card a .reveal p {
-    bottom: $image-hover-content-offset-bottom;
+    bottom: 0;
     left: $image-hover-content-offset-left;
     display: block;
     opacity: $alpha-opaque;
