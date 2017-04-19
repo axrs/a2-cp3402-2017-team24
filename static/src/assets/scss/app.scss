@@ -50,7 +50,9 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import './components/revealCard';
+
 @import './components/footer';
 @import './components/index';
-@import 'components/staff';
-@import 'components/qualifications';
+@import './components/staff';
+@import './components/qualifications';
