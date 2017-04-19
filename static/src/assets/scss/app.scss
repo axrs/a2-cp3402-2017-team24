@@ -50,5 +50,7 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import './components/footer';
+@import './components/index';
 @import 'components/staff';
 @import 'components/qualifications';

@@ -1,0 +1,21 @@
+@import '../_settings';
+
+.footer {
+    .menu {
+        &>li {
+            &>a {
+                padding: 0.5rem 0;
+            }
+        }
+    }
+
+    .columns {
+        margin-top: 1.5rem;
+    }
+
+    .copyright {
+        font-style: italic;
+        font-size: $small-font-size;
+        text-align: right;
+    }
+}
