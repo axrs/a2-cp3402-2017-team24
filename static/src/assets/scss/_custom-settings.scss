@@ -1,7 +1,17 @@
 /* ---------- _custom-settings.scss ---------- */
-$image-hover-wrapper-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-$image-hover-wrapper-transition-delay: 0.25s;
-$image-hover-wrapper-banner-width: 100%;
-$image-hover-wrapper-banner-topspace: 25%;
-$image-hover-wrapper-banner-bg: rgba($primary-color, 0.8);
-$image-hover-wrapper-icon-size: 24px;
+/* --- Colors --- */
+$color-primary: #0099ff;
+
+/* --- Spacing --- */
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 2rem;
+
+/* --- Borders --- */
+$border-primary: 1px solid $color-primary;
+
+/* --- Typography --- */
+$font-size-title: rem-calc(25);
+$font-size-subtitle: rem-calc(16);
+$font-size-content: rem-calc(15);
+$font-size-subtext: rem-calc(11);

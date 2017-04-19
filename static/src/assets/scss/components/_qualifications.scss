@@ -1,25 +1,23 @@
 /* ---------- _qualifications.scss ---------- */
 
-$brand-border: 1px solid $brand-primary;
-
 .qualifications {
   text-align: left;
 }
 
 .qualification-title {
-  font-size: rem-calc(16);
+  font-size: $font-size-subtitle;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: $spacing-small;
 }
 
 .qualification-list {
-  border-top: $brand-border;
+  border-top: $border-primary;
   list-style: none;
   margin-left: 0;
 }
 
 .qualification {
-  border-bottom: $brand-border;
-  font-size: rem-calc(11);
-  padding: 5px;
+  border-bottom: $border-primary;
+  font-size: $font-size-subtext;
+  padding: $spacing-small;
 }
