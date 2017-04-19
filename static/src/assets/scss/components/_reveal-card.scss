@@ -34,7 +34,7 @@ $card-height: 400px;
 }
 
 .image.card a .reveal {
-    background-color: rgba(0, 0, 0, $alpha-semi-transparent);
+    background-color: $color-background-overlay;
     color: $color-secondary;
     display: inline;
     height: 100%;
