@@ -23,3 +23,13 @@ $font-size-content: rem-calc(14);
 $font-size-subtext: rem-calc(11);
 
 $font-weight-bold: 600;
+
+/* ##### Global Styles ##### */
+* {
+  box-sizing: border-box;
+  color: $color-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-primary;
+}
