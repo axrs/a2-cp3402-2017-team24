@@ -4,22 +4,23 @@
 }
 
 .staff-photo {
-    padding: 1rem;
-    margin-bottom: 0.5rem;
+    padding: $spacing-medium;
+    margin-bottom: $spacing-small;
 }
 
-.staff-about-title {
-    padding-top: 0.5rem;
-    font-size: rem-calc(25);
+.staff-name {
+    padding-top: $spacing-small;
+    font-size: $font-size-title;
 }
 
-.staff-about-position {
-    margin-bottom: 30px;
-    font-size: rem-calc(16);
+.staff-subtitle {
+    margin-bottom: $spacing-large;
+    font-size: $font-size-subtitle;
 }
 
-.staff-about-details {
-    margin-bottom: 30px;
+.staff-content {
+    margin-bottom: $spacing-medium;
+    font-size: $font-size-content;
 }
 /* ---------- _teamMembers.scss ---------- */
 .team-members {
