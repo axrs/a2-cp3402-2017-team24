@@ -1,16 +1,16 @@
 /* ---------- _qualifications.scss ---------- */
 
-.qualifications {
+.qualifications-content {
   text-align: left;
 }
 
-.qualification-title {
+.qualifications-prelude {
   font-size: $font-size-subtitle;
   font-weight: bold;
   margin-bottom: $spacing-small;
 }
 
-.qualification-list {
+.qualifications-list {
   border-top: $border-primary;
   list-style: none;
   margin-left: 0;
