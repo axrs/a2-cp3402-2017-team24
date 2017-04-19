@@ -60,6 +60,26 @@ $image-hover-wrapper-icon-size: 24px;
     text-align: center;
     width: 100%;
     transition: $image-hover-wrapper-transition;
+    padding: 1rem;
+}
+
+.image.card a .reveal:hover h1 {
+    opacity: 1;
+    transform: translateY(-100%);
+    transition: $image-hover-wrapper-transition;
+    transition-delay: $image-hover-wrapper-transition-delay;
+}
+
+.image.card a .reveal h1 {
+    left: 0;
+    top: 50%;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    transition: $image-hover-wrapper-transition;
+    padding: 1rem;
 }
 
 .image.card a img {
