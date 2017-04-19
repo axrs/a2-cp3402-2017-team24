@@ -1,0 +1,21 @@
+/* ---------- _qualifications.scss ---------- */
+
+$brand-border: 1px solid $brand-primary;
+
+.qualification-title{
+  font-size: rem-calc(18);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.qualification-list {
+  border-top: $brand-border;
+  list-style: none;
+  margin-left: 0;
+}
+
+.qualification {
+  border-bottom: $brand-border;
+  font-size: rem-calc(11);
+  padding: 2px;
+}
