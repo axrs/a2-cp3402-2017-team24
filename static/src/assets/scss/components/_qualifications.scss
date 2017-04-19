@@ -2,8 +2,12 @@
 
 $brand-border: 1px solid $brand-primary;
 
-.qualification-title{
-  font-size: rem-calc(18);
+.qualifications {
+  text-align: left;
+}
+
+.qualification-title {
+  font-size: rem-calc(16);
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -17,5 +21,5 @@ $brand-border: 1px solid $brand-primary;
 .qualification {
   border-bottom: $brand-border;
   font-size: rem-calc(11);
-  padding: 2px;
+  padding: 5px;
 }

@@ -1,0 +1,35 @@
+/* ---------- _staff.scss ---------- */
+.staff-aside {
+  text-align: center;
+}
+
+.staff-photo {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.staff-about-title {
+  padding-top: 10px;
+  font-size: rem-calc(25);
+}
+
+.staff-about-position {
+  font-size: rem-calc(16);
+  margin-bottom: 30px;
+}
+
+.staff-about-details {
+  margin-bottom: 30px;
+}
+
+/* ---------- _teamMembers.scss ---------- */
+.team-members {
+  text-align: center;
+}
+.team-members-title {
+  margin-bottom: 50px;
+}
+
+.team-member {
+  background-image: url("http://placehold.it/100x100");
+}
