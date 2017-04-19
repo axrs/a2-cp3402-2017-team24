@@ -11,71 +11,79 @@ $image-hover-wrapper-icon-size: 24px;
     position: relative;
     padding: 0;
     text-align: center;
-    a {
-        display: block;
-        letter-spacing: normal;
-        line-height: initial;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        img {
-            float: left;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-        }
-        .reveal {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: $white;
-            display: inline;
-            height: 100%;
-            margin-left: -100%;
-            opacity: 0;
-            position: absolute;
-            width: 100%;
-            top: 0;
-            z-index: 80;
-            transition: $image-hover-wrapper-transition;
-            transition-delay: $image-hover-wrapper-transition-delay;
-            &:hover {
-                opacity: 1;
-                transition: $image-hover-wrapper-transition;
-            }
-            &:hover p {
-                opacity: 1;
-                transform: translateY(-100%);
-                transition: $image-hover-wrapper-transition;
-                transition-delay: $image-hover-wrapper-transition-delay;
-            }
-            p {
-                left: 0;
-                bottom: 0;
-                display: block;
-                opacity: 0;
-                position: absolute;
-                text-align: center;
-                width: 100%;
-                transition: $image-hover-wrapper-transition;
-            }
-        }
-        .fa {
-            font-size: $image-hover-wrapper-icon-size;
-        }
-    }
-    .title {
-        font-size: 150%;
-        display: block;
-        background-color: $image-hover-wrapper-banner-bg;
-        color: $white;
-        font-weight: 600;
-        left: 0;
-        padding: 0.5rem;
-        position: absolute;
-        bottom: 0;
-        min-height: 25%;
-        width: $image-hover-wrapper-banner-width;
-        z-index: 10;
-    }
+}
+
+.image.card a {
+    display: block;
+    letter-spacing: normal;
+    line-height: initial;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image.card a .reveal {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $white;
+    display: inline;
+    height: 100%;
+    margin-left: -100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 80;
+    transition: $image-hover-wrapper-transition;
+    transition-delay: $image-hover-wrapper-transition-delay;
+}
+
+.image.card a .reveal:hover {
+    opacity: 1;
+    transition: $image-hover-wrapper-transition;
+}
+
+.image.card a .reveal:hover p {
+    opacity: 1;
+    transform: translateY(-100%);
+    transition: $image-hover-wrapper-transition;
+    transition-delay: $image-hover-wrapper-transition-delay;
+}
+
+.image.card a .reveal p {
+    left: 0;
+    bottom: 0;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    transition: $image-hover-wrapper-transition;
+}
+
+.image.card a img {
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.image.card a .fa {
+    font-size: $image-hover-wrapper-icon-size;
+}
+
+.image.card .title {
+    font-size: 150%;
+    display: block;
+    background-color: $image-hover-wrapper-banner-bg;
+    color: $white;
+    font-weight: 600;
+    left: 0;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    min-height: 25%;
+    width: $image-hover-wrapper-banner-width;
+    z-index: 10;
 }
