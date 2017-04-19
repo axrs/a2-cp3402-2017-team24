@@ -1,6 +1,10 @@
 /* ---------- _custom-settings.scss ---------- */
 /* --- Colors --- */
 $color-primary: #0099ff;
+$color-secondary: $white;
+$alpha-transparent: 0.0;
+$alpha-semi-transparent: 0.5;
+$alpha-opaque: 1.0;
 
 /* --- Spacing --- */
 $spacing-small: 0.5rem;
@@ -15,3 +19,5 @@ $font-size-title: rem-calc(25);
 $font-size-subtitle: rem-calc(16);
 $font-size-content: rem-calc(14);
 $font-size-subtext: rem-calc(11);
+
+$font-weight-bold: 600;
