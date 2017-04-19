@@ -8,6 +8,10 @@
     margin-bottom: $spacing-small;
 }
 
+.staff-details {
+  margin-bottom: $spacing-large;
+}
+
 .staff-name {
     padding-top: $spacing-small;
     font-size: $font-size-title;
@@ -22,41 +26,7 @@
     margin-bottom: $spacing-medium;
     font-size: $font-size-content;
 }
-/* ---------- _teamMembers.scss ---------- */
-.team-members {
-    margin-bottom: 50px;
-}
 
-.team-members-title {
-    margin-bottom: 50px;
-}
-
-.team-member {
-    position: relative;
-    height: 200px;
-    text-align: center;
-}
-
-.team-member-title {
-    left: 0;
-    bottom: 50%;
-    display: block;
-    opacity: 0;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    transition: $image-hover-wrapper-transition;
-    font-size: rem-calc(25);
-}
-
-.team-member-info {
-    left: 0;
-    bottom: -10%;
-    display: block;
-    opacity: 0;
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    transition: $image-hover-wrapper-transition;
-    font-size: rem-calc(16);
+.other-staff {
+    margin-bottom: $spacing-large;
 }
