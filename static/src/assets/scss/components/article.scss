@@ -1,0 +1,34 @@
+@import '../_settings';
+
+$hero-height: 20rem;
+
+.hero{
+	background: url('https://images.pexels.com/photos/208826/pexels-photo-208826.jpeg?w=940&h=650&auto=compress&cs=tinysrgb') 50% no-repeat;
+	background-size: cover;
+	height: $hero-height;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	h1, p{
+		color: $white;
+		text-shadow: 1px 1px 2px $black;
+	}
+
+}
+
+section+section {
+	margin-top: 5rem;
+}
+
+.content strong{
+	font-size: 20px;
+}
+
+.related {
+	text-align: center;
+	h2 {
+		margin-bottom: 3rem;
+	}
+}
