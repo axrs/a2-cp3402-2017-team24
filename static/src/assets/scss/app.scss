@@ -49,7 +49,14 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
-@import './components/footer';
-@import './components/index';
 
+// Project-specific items
+@import 'custom-settings';
+
+@import './components/reveal-card';
+@import './components/staff-card';
+@import './components/qualifications';
+@import './components/footer';
 @import './components/latest-news';
+@import './pages/index';
+@import './pages/staff';

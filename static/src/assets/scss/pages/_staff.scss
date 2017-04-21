@@ -1,0 +1,33 @@
+/* ---------- _staff.scss ---------- */
+.staff-aside {
+    text-align: center;
+}
+
+.staff-photo {
+    padding: $spacing-medium;
+    margin-bottom: $spacing-small;
+}
+
+.staff-details {
+  margin-bottom: $spacing-large;
+}
+
+.staff-name {
+    padding-top: $spacing-small;
+    font-size: $font-size-title;
+}
+
+.staff-subtitle {
+    margin-bottom: $spacing-large;
+    font-size: $font-size-subtitle;
+}
+
+.staff-content {
+    margin-bottom: $spacing-medium;
+    font-size: $font-size-content;
+}
+
+.other-staff {
+    margin-bottom: $spacing-large;
+    text-align: center;
+}

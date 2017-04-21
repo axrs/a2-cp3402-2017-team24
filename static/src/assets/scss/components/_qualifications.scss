@@ -1,0 +1,23 @@
+/* ---------- _qualifications.scss ---------- */
+
+.qualifications-content {
+  text-align: left;
+}
+
+.qualifications-prelude {
+  font-size: $font-size-subtitle;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-small;
+}
+
+.qualifications-list {
+  border-top: $border-primary;
+  list-style: none;
+  margin-left: 0;
+}
+
+.qualification {
+  border-bottom: $border-primary;
+  font-size: $font-size-subtext;
+  padding: $spacing-small;
+}
