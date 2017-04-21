@@ -1,1 +1,38 @@
 /* ---------- _about.scss ---------- */
+.about-us {
+  margin-bottom: $spacing-large;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: $spacing-large;
+}
+
+.about-content {
+  font-size: $font-size-content;
+  margin-bottom: $spacing-medium;
+}
+
+.about-aside {
+  text-align: center;
+}
+
+.about-photo {
+  padding: $spacing-small;
+}
+
+.about-subtitle {
+  font-size: $font-size-subtitle;
+}
+
+.about-values {
+  margin-bottom: 0;
+}
+
+.about-values-quote {
+  font-style: italic;
+}
+
+.vision-mission-value {
+  margin-bottom: $spacing-large;
+}
