@@ -1,5 +1,19 @@
 @import '../_settings';
+@import '../_custom-settings';
 
-section+section{
+section{
 	margin-top: 5rem;
+}
+
+.content{
+	.card{
+		.card-section{
+			.date{
+				color: $color-background-overlay;
+			}
+		}
+	}
+	h1 {
+		text-align: center;
+	}
 }
