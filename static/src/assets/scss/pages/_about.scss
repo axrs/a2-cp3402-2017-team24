@@ -1,44 +1,46 @@
 /* ---------- _about.scss ---------- */
 .about-us {
-  margin-bottom: $spacing-large;
-
-  h1 {
-    text-align: center;
     margin-bottom: $spacing-large;
-  }
 
-  p {
-    font-size: $font-size-content;
-    margin-bottom: $spacing-medium;
-  }
-
-  .aside {
-    text-align: center;
-
-    img {
-      padding: $spacing-small;
+    h1 {
+        text-align: center;
+        margin-bottom: $spacing-large;
     }
-  }
+
+    p {
+        font-size: $font-size-content;
+        margin-bottom: $spacing-medium;
+    }
+
+    .aside {
+        text-align: center;
+
+        img {
+            padding: $spacing-small;
+        }
+    }
 }
 
 .our-goals {
-  margin-bottom: $spacing-large;
-  text-align: center;
-
-  h1 {
-    text-align: center;
     margin-bottom: $spacing-large;
-  }
+    text-align: center;
 
-  h1 {
-    font-size: $font-size-title;
-  }
+    h1 {
+        margin-bottom: $spacing-large;
+    }
 
-  .values {
-    margin-bottom: 0;
-  }
+    .goal {
+        h1 {
+            text-align: center;
+            font-size: $font-size-title;
+        }
 
-  .quote {
-    font-style: italic;
-  }
+        .values {
+            margin-bottom: 0;
+        }
+
+        .quote {
+            font-style: italic;
+        }
+    }
 }
