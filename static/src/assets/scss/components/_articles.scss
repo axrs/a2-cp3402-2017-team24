@@ -1,6 +1,6 @@
 /* ---------- _articles.scss ---------- */
-$news-primary-article-height: 600px;
-$news-article-height: $news-primary-article-height / 2;
+$news-feature-article-height: 600px;
+$news-article-height: $news-feature-article-height / 2;
 
 .articles {
     .article {
@@ -31,8 +31,8 @@ $news-article-height: $news-primary-article-height / 2;
         }
     }
 
-    .primary {
-        height: $news-primary-article-height;
+    .feature {
+        height: $news-feature-article-height;
         text-align: center;
 
         img {
