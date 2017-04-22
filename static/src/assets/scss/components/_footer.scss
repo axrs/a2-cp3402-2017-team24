@@ -3,13 +3,13 @@
   .menu {
     & > li {
       & > a {
-        padding: 0.5rem 0;
+        padding: $spacing-small 0;
       }
     }
   }
 
   .columns {
-    margin-top: 1.5rem;
+    margin-top: $spacing-medium;
   }
 
   .copyright {
