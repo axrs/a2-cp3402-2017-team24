@@ -1,3 +1,4 @@
+/* ---------- _training.scss ---------- */
 .training {
   .hero {
     h1 {
@@ -5,7 +6,7 @@
     }
 
     .box {
-      border-color: $border-primary;
+      border-color: $color-box-background;
       background-color: $color-box-background;
       padding: $spacing-medium;
     }
@@ -23,7 +24,6 @@
   }
 
   .conditions {
-    border-color: $border-primary;
     background-color: $color-box-background;
     padding: $spacing-medium;
 

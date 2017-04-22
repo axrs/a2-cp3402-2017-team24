@@ -6,10 +6,10 @@ $alpha-semi-transparent: 0.5;
 $alpha-slight-transparent: 0.8;
 $alpha-opaque: 1.0;
 
-$color-primary: #005dff;
+$color-primary: #347dcd;
 $color-secondary: $white;
 $color-background-overlay: rgba(0, 153, 255, $alpha-slight-transparent);
-$color-box-background: rgba(0, 153, 255, $alpha-heavy-transparent);
+$color-box-background: #ddedfd;
 
 /* --- Spacing --- */
 $spacing-small: 0.5rem;
@@ -19,6 +19,7 @@ $spacing-huge: 4rem;
 
 /* --- Borders --- */
 $border-primary: 1px solid $color-primary;
+$border-subtle: 1px solid $color-box-background;
 
 /* --- Typography --- */
 $font-size-title: rem-calc(25);

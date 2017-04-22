@@ -1,3 +1,4 @@
+/* ---------- _dl.scss ---------- */
 dl {
   font-size: $font-size-content;
   width: 100%;
@@ -13,13 +14,14 @@ dl {
 
   dt, dd {
     box-sizing: border-box;
-    border-bottom: $border-primary;
-    padding: $spacing-small;
+    border-bottom: $border-subtle;
+    padding: $spacing-small 0;
   }
 
   dt {
     width: 20%;
     margin: 0;
+    font-weight: normal;
     &:hover {
       background: $color-box-background;
       & + dd {
@@ -32,6 +34,7 @@ dl {
   dd {
     text-align: right;
     width: 80%;
+    font-weight: bold;
   }
 
 }
