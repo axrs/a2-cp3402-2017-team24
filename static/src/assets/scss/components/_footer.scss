@@ -4,17 +4,27 @@
   .menu {
     & > li {
       & > a {
-        padding: 0.5rem 0;
+        padding: $spacing-small 0;
       }
     }
   }
 
   .columns {
-    margin-top: 1.5rem;
+    margin-top: $spacing-medium;
   }
 
   .copyright {
     font-style: italic;
     font-size: $small-font-size;
+  }
+
+  h5 {
+    font-weight: bold;
+    font-size: $font-size-subtitle;
+    color: $dark-gray;
+  }
+
+  a {
+    font-size: $font-size-content;
   }
 }
