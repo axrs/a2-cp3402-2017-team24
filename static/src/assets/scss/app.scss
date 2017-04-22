@@ -49,4 +49,25 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// Project-specific items
+@import 'custom-settings';
+@import './components/top-bar';
+@import './components/other-staff';
+@import './components/image-card';
+@import './components/staff-card';
+@import './components/qualifications';
+@import './components/hero';
+@import './components/footer';
+@import './components/dl';
+@import './components/latest-news';
+@import './components/section';
+@import './components/pagination';
+@import './components/articles';
 @import './components/article';
+
+@import './pages/index';
+@import './pages/staff';
+@import './pages/about';
+@import './pages/training';
+@import './pages/news';

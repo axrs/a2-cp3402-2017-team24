@@ -1,0 +1,22 @@
+/* ---------- _qualifications.scss ---------- */
+.qualifications {
+    text-align: left;
+
+    h2 {
+        font-size: $font-size-subtitle;
+        font-weight: bold;
+        margin-bottom: $spacing-small;
+    }
+
+    ul {
+        border-top: $border-primary;
+        list-style: none;
+        margin-left: 0;
+
+        li {
+            border-bottom: $border-primary;
+            font-size: $font-size-subtext;
+            padding: $spacing-small;
+        }
+    }
+}

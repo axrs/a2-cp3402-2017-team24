@@ -1,0 +1,67 @@
+/* ---------- _custom-settings.scss ---------- */
+$color-black: #000000;
+$color-white: #ffffff;
+$color-corporate-orange: #FD6721;
+$color-corporate-blue: #010764;
+$color-corporate-grey: #8B8B8B;
+$color-corporate-offset-blue: #002B42;
+
+/* --- Colors --- */
+$alpha-transparent: 0.0;
+$alpha-heavy-transparent: 0.3;
+$alpha-semi-transparent: 0.5;
+$alpha-slight-transparent: 0.8;
+$alpha-opaque: 1.0;
+
+$color-primary: #000000;
+$color-secondary: $white;
+$color-overlay: $white;
+$color-background-overlay: rgba(0, 0, 0, $alpha-slight-transparent);
+$color-grey-box-background: rgba(139, 139, 139, 0.2);
+$color-grey-box-background-light: rgba(139, 139, 139, 0.1);
+$color-blue-box-background: rgba(1, 7, 100, 0.6);
+$color-blue-box-background-light: rgba(1, 7, 100, 0.1);
+
+/* --- Spacing --- */
+$spacing-small: 0.5rem;
+$spacing-medium: 1rem;
+$spacing-large: 2rem;
+$spacing-huge: 4rem;
+
+/* --- Hero --- */
+$hero-height: 20rem;
+$hero-image-width: 25rem;
+
+/* --- Borders --- */
+$border-primary: 1px solid $color-primary;
+$border-subtle: 1px solid $color-blue-box-background-light;
+
+/* --- Typography --- */
+$font-size-title: rem-calc(25);
+$font-size-header: rem-calc(20);
+$font-size-subtitle: rem-calc(16);
+$font-size-content: rem-calc(14);
+$font-size-subtext: rem-calc(11);
+
+/* --- Definition Lists --- */
+$definition-width: 100%;
+$definition-term-width: 20%;
+$definition-description-width: 80%;
+
+/* ##### Global Styles ##### */
+* {
+  box-sizing: border-box;
+  color: $color-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-primary;
+}
+
+section + section {
+  margin-top: $spacing-huge;
+}
+
+p {
+  font-size: $font-size-content;
+}
