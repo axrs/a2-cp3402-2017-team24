@@ -50,3 +50,13 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 @import './components/news';
+
+// Project-specific items
+@import 'custom-settings';
+
+@import './components/reveal-card';
+@import './components/qualifications';
+@import './components/footer';
+
+@import './pages/index';
+@import './pages/staff';
