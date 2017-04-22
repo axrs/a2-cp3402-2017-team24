@@ -1,7 +1,21 @@
 /* ---------- _index.scss ---------- */
 .latest-news {
-  text-align: center;
-  h2 {
-    margin-bottom: 3rem;
-  }
+    text-align: center;
+
+    h2 {
+        margin-bottom: $spacing-huge;
+    }
+}
+
+.hero {
+    min-height: $hero-height;
+    text-align: center;
+
+    h1 {
+        margin-top: $spacing-huge;
+    }
+}
+
+section + section {
+    margin-top: $spacing-huge;
 }
