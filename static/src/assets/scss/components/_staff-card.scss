@@ -1,17 +1,18 @@
 /* ---------- _staff-card.scss ---------- */
 $staff-image-hover-heading-offset-top: 40%;
 $staff-image-hover-content-offset-bottom: -10%;
-
 $staff-card-height: 300px;
 
 .image.card.staff {
     height: $staff-card-height;
-}
 
-.image.card.staff a .reveal h1 {
-    top: $staff-image-hover-heading-offset-top;
-}
+    a .reveal {
+        h1 {
+            top: $staff-image-hover-heading-offset-top;
+        }
 
-.image.card.staff a .reveal p {
-    bottom: $staff-image-hover-content-offset-bottom;
+        p {
+            bottom: $staff-image-hover-content-offset-bottom;
+        }
+    }
 }

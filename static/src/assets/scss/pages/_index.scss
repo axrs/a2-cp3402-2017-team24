@@ -1,9 +1,14 @@
 /* ---------- _index.scss ---------- */
 .latest-news {
-  text-align: center;
-  h2 {
-    margin-bottom: $spacing-huge;
-  }
+    text-align: center;
+
+    h2 {
+        margin-bottom: $spacing-huge;
+    }
+}
+
+section + section {
+    margin-top: $spacing-huge;
 }
 
 .home.hero {
