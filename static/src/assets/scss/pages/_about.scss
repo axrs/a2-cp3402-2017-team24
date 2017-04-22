@@ -23,23 +23,22 @@
 
 .our-goals {
   margin-bottom: $spacing-large;
+  text-align: center;
 
   h1 {
     text-align: center;
     margin-bottom: $spacing-large;
   }
 
-  .item {
-    h1 {
-      font-size: $font-size-title;
-    }
+  h1 {
+    font-size: $font-size-title;
+  }
 
-    .values {
-      margin-bottom: 0;
-    }
+  .values {
+    margin-bottom: 0;
+  }
 
-    .quote {
-      font-style: italic;
-    }
+  .quote {
+    font-style: italic;
   }
 }
