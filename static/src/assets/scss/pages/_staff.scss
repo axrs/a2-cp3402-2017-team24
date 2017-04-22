@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-.staff-photo {
+.staff-aside > img {
     padding: $spacing-medium;
     margin-bottom: $spacing-small;
 }
@@ -12,21 +12,17 @@
   margin-bottom: $spacing-large;
 }
 
-.staff-name {
+.staff-details > h1 {
     padding-top: $spacing-small;
     font-size: $font-size-title;
 }
 
-.staff-subtitle {
+.staff-details > h2 {
     margin-bottom: $spacing-large;
     font-size: $font-size-subtitle;
 }
 
-.staff-content {
+.staff-details > p {
     margin-bottom: $spacing-medium;
     font-size: $font-size-content;
-}
-
-.other-staff {
-    margin-bottom: $spacing-large;
 }
