@@ -35,7 +35,6 @@ $card-height: 400px;
 
 .image.card a .reveal {
     background-color: $color-background-overlay;
-    color: $color-secondary;
     display: inline;
     height: 100%;
     margin-left: -100%;
@@ -61,6 +60,7 @@ $card-height: 400px;
 }
 
 .image.card a .reveal h1 {
+    color: $color-overlay;
     top: $image-hover-heading-offset-top;
     left: $image-hover-content-offset-left;
     display: block;
@@ -81,6 +81,7 @@ $card-height: 400px;
 }
 
 .image.card a .reveal p {
+    color: $color-overlay;
     bottom: 0;
     left: $image-hover-content-offset-left;
     display: block;

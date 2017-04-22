@@ -1,22 +1,22 @@
 /* ---------- _qualifications.scss ---------- */
 
-.qualifications-content {
+.qualifications {
   text-align: left;
 }
 
-.qualifications-prelude {
+.qualifications > h2 {
   font-size: $font-size-subtitle;
   font-weight: $font-weight-bold;
   margin-bottom: $spacing-small;
 }
 
-.qualifications-list {
+.qualifications > ul {
   border-top: $border-primary;
   list-style: none;
   margin-left: 0;
 }
 
-.qualification {
+.qualifications li {
   border-bottom: $border-primary;
   font-size: $font-size-subtext;
   padding: $spacing-small;
