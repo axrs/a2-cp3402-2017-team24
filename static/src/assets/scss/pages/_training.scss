@@ -1,0 +1,55 @@
+.training {
+  .hero {
+    h1 {
+      margin-bottom: $spacing-large;
+    }
+
+    .box {
+      border-color: $border-primary;
+      background-color: $color-box-background;
+      padding: $spacing-medium;
+    }
+
+    .lead {
+      font-size: $font-size-header;
+      text-align: center;
+      margin-bottom: $spacing-large;
+    }
+
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .conditions {
+    border-color: $border-primary;
+    background-color: $color-box-background;
+    padding: $spacing-medium;
+
+    p {
+      font-size: $font-size-subtext;
+    }
+  }
+
+  .overview {
+    h2 {
+      font-size: $font-size-header;
+    }
+    h3 {
+      font-size: $font-size-subtitle;
+      font-weight: bold;
+    }
+  }
+
+  .faq {
+    h3 {
+      text-align: center;
+      margin-bottom: $spacing-large;
+    }
+    h4 {
+      font-size: $font-size-content;
+      font-weight: bold;
+    }
+  }
+}
