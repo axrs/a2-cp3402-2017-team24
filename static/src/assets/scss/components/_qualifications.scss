@@ -1,23 +1,22 @@
 /* ---------- _qualifications.scss ---------- */
-
 .qualifications {
-  text-align: left;
-}
+    text-align: left;
 
-.qualifications > h2 {
-  font-size: $font-size-subtitle;
-  font-weight: $font-weight-bold;
-  margin-bottom: $spacing-small;
-}
+    h2 {
+        font-size: $font-size-subtitle;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-small;
+    }
 
-.qualifications > ul {
-  border-top: $border-primary;
-  list-style: none;
-  margin-left: 0;
-}
+    ul {
+        border-top: $border-primary;
+        list-style: none;
+        margin-left: 0;
 
-.qualifications li {
-  border-bottom: $border-primary;
-  font-size: $font-size-subtext;
-  padding: $spacing-small;
+        li {
+            border-bottom: $border-primary;
+            font-size: $font-size-subtext;
+            padding: $spacing-small;
+        }
+    }
 }
