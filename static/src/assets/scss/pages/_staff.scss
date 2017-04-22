@@ -1,0 +1,28 @@
+/* ---------- _staff.scss ---------- */
+.staff-aside {
+    text-align: center;
+}
+
+.staff-aside > img {
+    padding: $spacing-medium;
+    margin-bottom: $spacing-small;
+}
+
+.staff-details {
+  margin-bottom: $spacing-large;
+}
+
+.staff-details > h1 {
+    padding-top: $spacing-small;
+    font-size: $font-size-title;
+}
+
+.staff-details > h2 {
+    margin-bottom: $spacing-large;
+    font-size: $font-size-subtitle;
+}
+
+.staff-details > p {
+    margin-bottom: $spacing-medium;
+    font-size: $font-size-content;
+}
