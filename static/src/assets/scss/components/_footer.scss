@@ -1,19 +1,19 @@
 .footer {
-    .menu {
-        &>li {
-            &>a {
-                padding: 0.5rem 0;
-            }
-        }
+  margin-top: $spacing-large;
+  .menu {
+    & > li {
+      & > a {
+        padding: $spacing-small 0;
+      }
     }
+  }
 
-    .columns {
-        margin-top: 1.5rem;
-    }
+  .columns {
+    margin-top: $spacing-medium;
+  }
 
-    .copyright {
-        font-style: italic;
-        font-size: $small-font-size;
-        text-align: right;
-    }
+  .copyright {
+    font-style: italic;
+    font-size: $small-font-size;
+  }
 }

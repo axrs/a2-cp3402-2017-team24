@@ -1,18 +1,18 @@
 .hero {
-    min-height: 20rem;
-    text-align: center;
-    h1 {
-        margin-top: 4rem;
-    }
+  min-height: $hero-height;
+  text-align: center;
+  h1 {
+    margin-top: $spacing-huge;
+  }
 }
 
-section+section {
-    margin-top: 5rem;
+section + section {
+  margin-top: $spacing-huge;
 }
 
 .latest-news {
-    text-align: center;
-    h2 {
-        margin-bottom: 3rem;
-    }
+  text-align: center;
+  h2 {
+    margin-bottom: $spacing-huge;
+  }
 }

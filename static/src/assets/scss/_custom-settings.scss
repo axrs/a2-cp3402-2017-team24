@@ -14,12 +14,17 @@ $color-background-overlay: rgba(0, 0, 0, $alpha-slight-transparent);
 $spacing-small: 0.5rem;
 $spacing-medium: 1rem;
 $spacing-large: 2rem;
+$spacing-huge: 4rem;
+
+/* --- Hero --- */
+$hero-height: 20rem;
 
 /* --- Borders --- */
 $border-primary: 1px solid $color-primary;
 
 /* --- Typography --- */
 $font-size-title: rem-calc(25);
+$font-size-header: rem-calc(20);
 $font-size-subtitle: rem-calc(16);
 $font-size-content: rem-calc(14);
 $font-size-subtext: rem-calc(11);
