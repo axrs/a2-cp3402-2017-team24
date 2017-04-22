@@ -6,9 +6,10 @@ $alpha-semi-transparent: 0.5;
 $alpha-slight-transparent: 0.8;
 $alpha-opaque: 1.0;
 
-$color-primary: #347dcd;
+$color-primary: #000000;
 $color-secondary: $white;
-$color-background-overlay: rgba(0, 153, 255, $alpha-slight-transparent);
+$color-overlay: $white;
+$color-background-overlay: rgba(0, 0, 0, $alpha-slight-transparent);
 $color-box-background: #ddedfd;
 
 /* --- Spacing --- */
