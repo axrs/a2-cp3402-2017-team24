@@ -1,15 +1,4 @@
-.hero {
-  min-height: $hero-height;
-  text-align: center;
-  h1 {
-    margin-top: $spacing-huge;
-  }
-}
-
-section + section {
-  margin-top: $spacing-huge;
-}
-
+/* ---------- _index.scss ---------- */
 .latest-news {
   text-align: center;
   h2 {

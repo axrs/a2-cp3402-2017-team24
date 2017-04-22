@@ -1,3 +1,4 @@
+/* ---------- _footer.scss ---------- */
 .footer {
   margin-top: $spacing-large;
   .menu {
@@ -15,5 +16,15 @@
   .copyright {
     font-style: italic;
     font-size: $small-font-size;
+  }
+
+  h5 {
+    font-weight: bold;
+    font-size: $font-size-subtitle;
+    color: $dark-gray;
+  }
+
+  a {
+    font-size: $font-size-content;
   }
 }
