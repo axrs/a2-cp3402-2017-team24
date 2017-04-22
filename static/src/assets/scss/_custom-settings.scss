@@ -34,6 +34,11 @@ $font-size-subtext: rem-calc(11);
 
 $font-weight-bold: 600;
 
+/* --- Definition Lists --- */
+$definition-width: 100%;
+$definition-term-width: 20%;
+$definition-description-width: 80%;
+
 /* ##### Global Styles ##### */
 * {
   box-sizing: border-box;
