@@ -22,9 +22,9 @@ dl {
     width: $definition-term-width;
     margin: 0;
     &:hover {
-      background: $color-box-background;
+      background: $color-blue-box-background-light;
       & + dd {
-        background: $color-box-background;
+        background: $color-blue-box-background-light;
       }
     }
 
