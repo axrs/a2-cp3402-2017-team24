@@ -3,26 +3,28 @@
     text-align: center;
 
     img {
-      padding: $spacing-medium;
-      margin-bottom: $spacing-small;
+        padding: $spacing-medium;
+        margin-bottom: $spacing-small;
     }
 }
 
 .staff-details {
-  margin-bottom: $spacing-large;
-
-  h1 {
-    padding-top: $spacing-small;
-    font-size: $font-size-title;
-  }
-
-  h2 {
     margin-bottom: $spacing-large;
-    font-size: $font-size-subtitle;
-  }
 
-  p {
+    h1 {
+        padding-top: $spacing-small;
+        font-size: $font-size-title;
+    }
+
+    h2 {
+        margin-bottom: $spacing-large;
+        font-size: $font-size-subtitle;
+    }
+
+    p {
+        margin-bottom: $spacing-medium;
+        font-size: $font-size-content;
+    }
     margin-bottom: $spacing-medium;
     font-size: $font-size-content;
-  }
 }

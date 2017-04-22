@@ -4,7 +4,6 @@ $staff-image-hover-content-offset-bottom: -10%;
 $staff-card-height: 300px;
 
 .image.card.staff {
-
     height: $staff-card-height;
 
     a .reveal {
@@ -16,5 +15,4 @@ $staff-card-height: 300px;
             bottom: $staff-image-hover-content-offset-bottom;
         }
     }
-
 }
