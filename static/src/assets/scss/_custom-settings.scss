@@ -1,6 +1,7 @@
 /* ---------- _custom-settings.scss ---------- */
 /* --- Colors --- */
 $alpha-transparent: 0.0;
+$alpha-heavy-transparent: 0.3;
 $alpha-semi-transparent: 0.5;
 $alpha-slight-transparent: 0.8;
 $alpha-opaque: 1.0;
@@ -8,6 +9,7 @@ $alpha-opaque: 1.0;
 $color-primary: #005dff;
 $color-secondary: $white;
 $color-background-overlay: rgba(0, 153, 255, $alpha-slight-transparent);
+$color-box-background: rgba(0, 153, 255, $alpha-heavy-transparent);
 
 /* --- Spacing --- */
 $spacing-small: 0.5rem;
@@ -35,4 +37,12 @@ $font-weight-bold: 600;
 
 h1, h2, h3, h4, h5, h6 {
   color: $color-primary;
+}
+
+section + section {
+  margin-top: $spacing-huge;
+}
+
+p {
+  font-size: $font-size-content;
 }

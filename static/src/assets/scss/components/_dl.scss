@@ -1,0 +1,37 @@
+dl {
+  font-size: $font-size-content;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: space-between;
+
+  dt, dd {
+    box-sizing: border-box;
+    border-bottom: $border-primary;
+    padding: $spacing-small;
+  }
+
+  dt {
+    width: 20%;
+    margin: 0;
+    &:hover {
+      background: $color-box-background;
+      & + dd {
+        background: $color-box-background;
+      }
+    }
+
+  }
+
+  dd {
+    text-align: right;
+    width: 80%;
+  }
+
+}
