@@ -1,3 +1,40 @@
+/* ---------- _top-bar.scss ---------- */
 .top-bar {
-  background-color: $color-corporate-orange;
+  background-color: $color-corporate-blue;
+  ul {
+    border: none;
+    background-color: transparent;
+    li a {
+      color: $color-white;
+    }
+    ul {
+      background-color: $color-corporate-blue;
+    }
+  }
 }
+
+.top-bar-title {
+  margin: 0;
+  padding: 0;
+  a {
+    margin: 0.5rem;
+    display: block;
+    img {
+      height: 24px;
+    }
+  }
+  /* Mobile Only */
+  @media only screen and (max-width: 40em) {
+    width: 100%;
+    span, a {
+      padding: $spacing-small;
+    }
+    span {
+      float: left;
+    }
+    a {
+      margin: 0 $spacing-medium;
+    }
+  }
+}
+
