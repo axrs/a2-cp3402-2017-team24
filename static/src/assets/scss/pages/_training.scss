@@ -6,15 +6,14 @@
     }
 
     .box {
-      border-color: $color-box-background;
-      background-color: $color-box-background;
+      background-color: $color-grey-box-background;
       padding: $spacing-medium;
     }
 
     .lead {
       font-size: $font-size-header;
       text-align: center;
-      margin-bottom: $spacing-large;
+      margin-bottom: $spacing-medium;
     }
 
   }
@@ -24,7 +23,7 @@
   }
 
   .conditions {
-    background-color: $color-box-background;
+    background-color: $color-grey-box-background;
     padding: $spacing-medium;
 
     p {

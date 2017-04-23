@@ -52,6 +52,7 @@
 
 // Project-specific items
 @import 'custom-settings';
+@import './components/top-bar';
 @import './components/other-staff';
 @import './components/image-card';
 @import './components/staff-card';
@@ -62,7 +63,12 @@
 @import './components/dl';
 @import './components/latest-news';
 @import './components/section';
+@import './components/pagination';
+@import './components/articles';
+
 @import './pages/index';
 @import './pages/staff';
 @import './pages/contact';
-
+@import './pages/about';
+@import './pages/training';
+@import './pages/news';
