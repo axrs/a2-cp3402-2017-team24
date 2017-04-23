@@ -1,8 +1,4 @@
-@import '../_settings';
-
-$hero-height: 20rem;
-
-.hero{
+.article-hero{
 	background: url('https://images.pexels.com/photos/208826/pexels-photo-208826.jpeg?w=940&h=650&auto=compress&cs=tinysrgb') 50% no-repeat;
 	background-size: cover;
 	height: $hero-height;
@@ -18,17 +14,11 @@ $hero-height: 20rem;
 
 }
 
-section+section {
-	margin-top: 5rem;
-}
-
-.content strong{
-	font-size: 20px;
-}
-
-.related {
-	text-align: center;
-	h2 {
-		margin-bottom: 3rem;
+.article-content{
+	strong{
+		font-size: 20px;
+	}
+	.row p{
+		margin-bottom: 0;
 	}
 }
