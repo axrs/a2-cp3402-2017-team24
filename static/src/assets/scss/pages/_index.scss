@@ -10,3 +10,10 @@
 section + section {
     margin-top: $spacing-huge;
 }
+
+.home.hero {
+  h1 {
+    margin-top: $spacing-large;
+    font-size: $font-size-title;
+  }
+}
