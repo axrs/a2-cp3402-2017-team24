@@ -18,7 +18,12 @@
 	strong{
 		font-size: 20px;
 	}
-	.row p{
-		margin-bottom: 0;
+	p{
+		padding-bottom: $spacing-small;
+	}
+	img{
+		display: block;
+		margin: 0 auto;
+		margin-bottom: $spacing-small;
 	}
 }
