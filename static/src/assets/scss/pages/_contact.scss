@@ -1,6 +1,9 @@
 /* ---------- _contact.scss ---------- */
 .contact-form{
 	padding-top: $spacing-large;
+	label{
+		display: -webkit-inline-box;
+	}
 }
 
 .contact-list{
@@ -25,4 +28,7 @@
 	width: 100%;
 	padding-left: 0;
 	padding-right: 0;
+}
+.mail{
+	text-align: center;
 }
