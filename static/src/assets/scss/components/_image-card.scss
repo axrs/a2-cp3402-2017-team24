@@ -37,6 +37,20 @@ $card-height: 400px;
     pointer-events: none;
   }
 
+  .subtext {
+      font-size: $font-size-subtitle;
+      display: block;
+      color: $white;
+      bottom: -40px;
+      left: 0;
+      padding: $spacing-small;
+      position: absolute;
+      min-height: $image-hover-title-min-height;
+      width: $image-hover-wrapper-banner-width;
+      z-index: $image-hover-title-z-index;
+      pointer-events: none;
+  }
+
   a {
     display: block;
     letter-spacing: normal;
