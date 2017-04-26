@@ -50,7 +50,7 @@ $mobile-image-width: $mobile-image-height;
 
     .mobile-only {
         display: none;
-        @media only screen and (max-width: 64em) {
+        @media only screen and (max-width: $media-query-size-tablet) {
             display: block;
             text-align: center;
 
@@ -63,7 +63,7 @@ $mobile-image-width: $mobile-image-height;
     }
 
     .no-mobile {
-      @media only screen and (max-width: 64em) {
+      @media only screen and (max-width: $media-query-size-tablet) {
         display: none;
       }
     }
