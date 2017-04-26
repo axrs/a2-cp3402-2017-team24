@@ -41,6 +41,14 @@
         text-align: center;
         font-weight: bold;
     }
+
+    .gallery {
+        text-align: center;
+
+        .primary {
+            margin-bottom: $spacing-small;
+        }
+    }
 }
 
 .product-information {
