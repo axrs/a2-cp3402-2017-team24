@@ -29,47 +29,46 @@ $shop-item-card-price-top: $shop-item-card-description-top + 15%;
 }
 
 .shop-items {
-  .image.card {
-    &:hover img {
-      opacity: 0.2;
+
+    .image.card {
+        &:hover img {
+            opacity: 0.2;
+        }
     }
-  }
 
-  .image.card .title {
-    background: none;
-    color: $black;
-    bottom: auto;
-    top: $shop-item-card-title-top;
-  }
+    .image.card .title {
+        background: none;
+        color: $black;
+        bottom: auto;
+        top: $shop-item-card-title-top;
+    }
 
-  .image.card .short-description {
-    font-size: $font-size-content;
-    display: block;
-    color: $black;
-    top: $shop-item-card-description-top;
-    left: 0;
-    padding: $spacing-small;
-    position: absolute;
-    min-height: $image-hover-title-min-height;
-    width: $image-hover-wrapper-banner-width;
-    z-index: $image-hover-title-z-index;
-    pointer-events: none;
-  }
+    .image.card .short-description {
+        font-size: $font-size-content;
+        display: block;
+        color: $black;
+        top: $shop-item-card-description-top;
+        left: 0;
+        padding: $spacing-small;
+        position: absolute;
+        min-height: $image-hover-title-min-height;
+        width: $image-hover-wrapper-banner-width;
+        z-index: $image-hover-title-z-index;
+        pointer-events: none;
+    }
 
-  .image.card .price {
-    font-size: $font-size-subtitle;
-    display: block;
-    color: $black;
-    font-weight: bold;
-    top: $shop-item-card-price-top;
-    left: 0;
-    padding: $spacing-small;
-    position: absolute;
-    min-height: $image-hover-title-min-height;
-    width: $image-hover-wrapper-banner-width;
-    z-index: $image-hover-title-z-index;
-    pointer-events: none;
-  }
-
-
+    .image.card .price {
+        font-size: $font-size-subtitle;
+        display: block;
+        color: $black;
+        font-weight: bold;
+        top: $shop-item-card-price-top;
+        left: 0;
+        padding: $spacing-small;
+        position: absolute;
+        min-height: $image-hover-title-min-height;
+        width: $image-hover-wrapper-banner-width;
+        z-index: $image-hover-title-z-index;
+        pointer-events: none;
+    }
 }
