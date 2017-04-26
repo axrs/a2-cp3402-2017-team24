@@ -29,6 +29,12 @@ $shop-item-card-price-top: $shop-item-card-description-top + 15%;
 }
 
 .shop-items {
+    .card.event {
+      height: $card-height;
+      position: relative;
+      padding: 0;
+      text-align: center;
+    }
 
     .image.card {
         &:hover img {
