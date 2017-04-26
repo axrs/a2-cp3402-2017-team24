@@ -31,6 +31,7 @@ $shop-item-card-price-top: $shop-item-card-description-top + 15%;
       padding: 0;
       text-align: center;
       padding: $spacing-large;
+      border: $border-subtle;
 
       .title {
         margin-top: $spacing-large;
