@@ -34,6 +34,17 @@ $shop-item-card-price-top: $shop-item-card-description-top + 15%;
       position: relative;
       padding: 0;
       text-align: center;
+      padding: $spacing-large;
+
+      .title {
+        margin-top: $spacing-large;
+        margin-bottom: $spacing-large;
+      }
+
+      .description {
+        font-size: $font-size-subtitle;
+        margin-bottom: $spacing-large;
+      }
     }
 
     .image.card {
