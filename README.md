@@ -37,6 +37,8 @@ target audience.
 
 ## Git Flow for Content and Deployment
 
+![https://github.com/CP3402-2017-1/a2-cp3402-2017-team24/raw/db-sync/resources/deployment_sequence.png][https://github.com/CP3402-2017-1/a2-cp3402-2017-team24/raw/db-sync/resources/deployment_sequence.png]
+
 ```
 sequenceDiagram
     participant Localhost
