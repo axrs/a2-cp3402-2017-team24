@@ -34,3 +34,51 @@ target audience.
   * Contact by slack @dalesedgman
   * Contact by email dale.sedgman@my.jcu.edu.au
   * GitHub User @Sedgy
+
+## Git Flow for Content and Deployment
+
+```
+sequenceDiagram
+    participant Localhost
+    participant GitHub
+    participant Staging
+    participant Production
+
+    GitHub->>Localhost: Pull Code From `development`
+        Note over Localhost,Production: If you need the latest content
+    Localhost->>Production: Request content database
+
+    Production-->>Localhost: Update Content Database
+
+    Localhost->>Localhost: Create a new branch for task
+
+    Localhost->>GitHub: Push branch to GitHub
+
+    loop Write Code
+        Localhost->>Localhost: Integrate the task. Committing often.
+    end
+
+    Localhost->>GitHub: Push code changes to GitHub
+
+    Note over Localhost,GitHub: Open Pull Request into `development`
+
+    loop Review
+
+        GitHub->>GitHub: Other team members review code
+        alt If Changes are Requested
+            Localhost->>Localhost: Make changes
+            Localhost->>GitHub: Push changes back for review
+        else If No Changes && Everyone Reviewed
+            GitHub->>GitHub: Merge Request
+        end
+    end
+
+    GitHub->>Staging: POST Webhook notifying of branch change
+ 
+    Staging->>Staging: Pull code from `development`
+    Staging->>Production: Request content database
+    Production-->>Staging: Update Content Database
+    
+    GitHub->>Production: POST Webhook notifying of branch change
+    Production->>Production: Pull code from `master` branch
+```
