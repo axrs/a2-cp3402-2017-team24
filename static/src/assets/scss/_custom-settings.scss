@@ -66,3 +66,7 @@ section + section {
 p {
   font-size: $font-size-content;
 }
+
+.button.round {
+    border-radius: 1000px;
+}
