@@ -1,0 +1,88 @@
+/* ---------- _shop.scss ---------- */
+$shop-item-card-title-top: 25%;
+$shop-item-card-description-top: $shop-item-card-title-top + 15%;
+$shop-item-card-price-top: $shop-item-card-description-top + 15%;
+
+.products-header {
+    text-align: center;
+
+    h1 {
+        margin-bottom: $spacing-large;
+    }
+
+    .categories {
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin-right: $spacing-medium;
+
+            :last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.shop-items {
+    .card.event {
+      height: $card-height;
+      position: relative;
+      padding: 0;
+      text-align: center;
+      padding: $spacing-large;
+      border: $border-subtle;
+
+      .title {
+        margin-top: $spacing-large;
+        margin-bottom: $spacing-large;
+      }
+
+      .description {
+        font-size: $font-size-subtitle;
+        margin-bottom: $spacing-large;
+      }
+    }
+
+    .image.card {
+        &:hover img {
+            opacity: 0.2;
+        }
+    }
+
+    .image.card .title {
+        background: none;
+        color: $black;
+        bottom: auto;
+        top: $shop-item-card-title-top;
+    }
+
+    .image.card .short-description {
+        font-size: $font-size-content;
+        display: block;
+        color: $black;
+        top: $shop-item-card-description-top;
+        left: 0;
+        padding: $spacing-small;
+        position: absolute;
+        min-height: $image-hover-title-min-height;
+        width: $image-hover-wrapper-banner-width;
+        z-index: $image-hover-title-z-index;
+        pointer-events: none;
+    }
+
+    .image.card .price {
+        font-size: $font-size-subtitle;
+        display: block;
+        color: $black;
+        font-weight: bold;
+        top: $shop-item-card-price-top;
+        left: 0;
+        padding: $spacing-small;
+        position: absolute;
+        min-height: $image-hover-title-min-height;
+        width: $image-hover-wrapper-banner-width;
+        z-index: $image-hover-title-z-index;
+        pointer-events: none;
+    }
+}

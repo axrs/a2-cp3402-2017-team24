@@ -1,0 +1,29 @@
+/* ---------- _contact.scss ---------- */
+.contact-form{
+	padding-top: $spacing-large;
+}
+
+.contact-list{
+	margin-top: $spacing-large;
+	border-top: $border-primary;
+	list-style: none;
+	margin-left: 0;
+	dd, dt{
+		border-bottom: $border-primary;
+		font-size: $font-size-subtext;
+		padding: $spacing-small;
+	}
+}
+.map-row{
+	max-width: 100%;
+	text-align: center;
+}
+.map{
+	width: 100%;
+	height: $hero-height;
+	padding-left: 0;
+	padding-right: 0;
+}
+.mail{
+	text-align: center;
+}
