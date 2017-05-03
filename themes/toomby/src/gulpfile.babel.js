@@ -26,7 +26,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(sass, javascript, images, copy)));
+ gulp.series(clean, gulp.parallel(sass, javascript, copy)));
 
 // Delete the "dist" folder
 // This happens every time a build starts
@@ -73,16 +73,6 @@ function javascript() {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
-}
-
-// Copy images to the "dist" folder
-// In production, the images are compressed
-function images() {
-  return gulp.src('assets/img/**/*')
-    .pipe($.if(PRODUCTION, $.imagemin({
-      progressive: true
-    })))
-    .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 
 // Reload the browser with BrowserSync
