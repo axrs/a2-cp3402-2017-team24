@@ -3,6 +3,6 @@ node_modules
 npm-debug.log
 bower_components
 dist
-!themes/toombby/dist
+!/themes/toomby/dist
 *.swp
 uploads/*
