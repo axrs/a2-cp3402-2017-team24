@@ -30,7 +30,7 @@ gulp.task('build',
 
  // Build the "dist" folder for the *theme*
 gulp.task('dist',
-  gulp.series(clean, gulp.parallel(sass_dist, javascript_dist, copy_dist)));
+  gulp.series(clean, gulp.parallel(sass_theme, javascript_theme, copy_theme)));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
