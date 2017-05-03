@@ -1,5 +1,13 @@
 <?php
 
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
+
+function my_acf_settings_dir( $dir ) {
+    $dir = get_stylesheet_directory_uri() . '/plugins/advanced-custom-fields-pro/';
+    return $dir;
+}
+
+include_once('plugins/advanced-custom-fields-pro/acf.php');
 include_once('acf/init.php');
 
 if ( ! class_exists( 'Timber' ) ) {
