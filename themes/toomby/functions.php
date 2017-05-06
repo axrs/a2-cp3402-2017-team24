@@ -40,7 +40,6 @@ Timber::$dirname = array('templates', 'views');
 
 class StarterSite extends TimberSite
 {
-
     function __construct()
     {
         add_theme_support('post-formats');
@@ -67,16 +66,16 @@ class StarterSite extends TimberSite
     function add_to_context($context)
     {
         $context['menu'] = new TimberMenu();
-        $context['site'] = $this;
+        $context['site_options'] = get_fields('options');
         // Other menu items
         $locations = get_nav_menu_locations();
         $menus = array('footer_right_menu', 'footer_middle_menu', 'footer_left_menu');
-
         foreach ($menus as $m) {
             if ($locations[$m]) {
                 $context[$m] = new TimberMenu($m);
             }
         }
+        $context['site'] = $this;
         return $context;
     }
 

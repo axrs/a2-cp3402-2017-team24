@@ -24,29 +24,7 @@
         <div class="top-bar-left">
         </div>
         <div class="top-bar-right">
-            <ul class="vertical medium-horizontal dropdown menu" data-dropdown-menu="dvv26d-dropdown-menu"
-                role="menubar">
-                {% include "menu.twig" with {'menu': menu.get_items} %}
-                <li role="menuitem" class="is-dropdown-submenu-parent opens-left" aria-haspopup="true"
-                    aria-label="Training">
-                    <a href="#">Training</a>
-                    <ul class="menu vertical submenu is-dropdown-submenu first-sub" data-submenu="" role="menu">
-                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="#">Working
-                            Dogs &amp; Horses</a></li>
-                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a
-                                href="ultimate-rural-training-centre.html">Ultimate Rural Training Centre</a></li>
-                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="#">Toomby
-                            Equine Muscular Therapy</a></li>
-                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a
-                                href="#">EMM-TECH</a></li>
-                    </ul>
-                </li>
-                <li role="menuitem"><a href="#">Shop</a></li>
-                <li role="menuitem"><a href="#">News &amp; Media</a></li>
-                <li role="menuitem"><a href="#">Events</a></li>
-                <li role="menuitem"><a href="#">About Us</a></li>
-                <li role="menuitem"><a href="#">Contact</a></li>
-            </ul>
+            {% include "header/navigation.twig" with {'menu': menu.get_items} %}
         </div>
     </div>
 </div>
