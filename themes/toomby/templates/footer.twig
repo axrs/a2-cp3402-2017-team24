@@ -24,9 +24,32 @@
     <div class="large-3 medium-6 columns end">
         <h5>Our Sponsors</h5>
         <a href="#">Toomby Horsemanship would not be possible without our amazing sponsors.</a>
+
+        {% if site_options.facebook_url or site_options.twitter_url or site_options.linkedin_url %}
         <h5>Social Media</h5>
-        <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a>
-        <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
+        {% endif %}
+
+        {% if site_options.facebook_url %}
+        <a href="{{ site_options.facebook_url }}" title="Find us on Facebook">
+            <i class="fa fa-facebook"></i>
+            Facebook
+        </a>
+        {% endif %}
+
+        {% if site_options.twitter_url %}
+        <a href="{{ site_options.twitter_url }}" title="Follow us on Twitter">
+            <i class="fa fa-twitter"></i>
+            Twitter
+        </a>
+        {% endif %}
+
+        {% if site_options.linkedin_url %}
+        <a href="{{ site_options.linkedin_url }}" title="Connect with us on LinkedIn">
+            <i class="fa fa-linkedin"></i>
+            LinkedIn
+        </a>
+        {% endif %}
+
     </div>
 </div>
 <div class="row medium-text-center text-center">
