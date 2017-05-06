@@ -68,7 +68,6 @@ class StarterSite extends TimberSite
     {
         $context['menu'] = new TimberMenu();
         $context['site'] = $this;
-
         // Other menu items
         $locations = get_nav_menu_locations();
         $menus = array('footer_right_menu', 'footer_middle_menu', 'footer_left_menu');

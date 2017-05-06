@@ -1,46 +1,78 @@
 {% block html_head_container %}
 
 {% include 'html-header.twig' %}
-	{% block head %}
-	{% endblock %}
-	</head>
+{% block head %}
+{% endblock %}
+</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<header class="header" >
-			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
-				</div>
-			{% endblock %}
-		</header>
+<body class="{{body_class}}" data-template="base.twig">
 
-		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
-		</section>
+{% block navigation %}
+<div class="top-bar">
+    <div class="top-bar-title">
+	    <span data-responsive-toggle="responsive-menu" data-hide-for="medium" style="display: none;">
+			<button class="menu-icon" type="button" data-toggle=""></button>
+    	</span>
+        {% if site_options.logo %}
+        <a href="/" title="{{site.name}}"><img src="{{TimberImage(site_options.logo).src}}"></a>
+        {% else %}
+        <a href="/" title="{{site.name}}">{{site.name}}</a>
+        {% endif %}
+    </div>
+    <div id="responsive-menu">
+        <div class="top-bar-left">
+        </div>
+        <div class="top-bar-right">
+            <ul class="vertical medium-horizontal dropdown menu" data-dropdown-menu="dvv26d-dropdown-menu"
+                role="menubar">
+                {% include "menu.twig" with {'menu': menu.get_items} %}
+                <li role="menuitem" class="is-dropdown-submenu-parent opens-left" aria-haspopup="true"
+                    aria-label="Training">
+                    <a href="#">Training</a>
+                    <ul class="menu vertical submenu is-dropdown-submenu first-sub" data-submenu="" role="menu">
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="#">Working
+                            Dogs &amp; Horses</a></li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a
+                                href="ultimate-rural-training-centre.html">Ultimate Rural Training Centre</a></li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a href="#">Toomby
+                            Equine Muscular Therapy</a></li>
+                        <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item"><a
+                                href="#">EMM-TECH</a></li>
+                    </ul>
+                </li>
+                <li role="menuitem"><a href="#">Shop</a></li>
+                <li role="menuitem"><a href="#">News &amp; Media</a></li>
+                <li role="menuitem"><a href="#">Events</a></li>
+                <li role="menuitem"><a href="#">About Us</a></li>
+                <li role="menuitem"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
 
-		{% block footer %}
-			<footer id="footer" class="footer section">
-				{% include 'footer.twig' %}
-			</footer>
-			{{ function('wp_footer') }}
-		{% endblock %}
+<section id="content" role="main" class="content-wrapper">
+    {% if title %}<h1>{{title}}</h1>{% endif %}
+    <div class="wrapper {{sidebar_class}}">
+        {% block content %}
+        Sorry, no content
+        {% endblock %}
+    </div>
+    {% if sidebar %}
+    <aside class="layout-sidebar">
+        {{sidebar}}
+    </aside>
+    {% endif %}
+</section>
 
-        <script src="{{site.theme.link}}/dist/assets/js/app.js"></script>
-	</body>
+{% block footer %}
+<footer id="footer" class="footer section">
+    {% include 'footer.twig' %}
+</footer>
+{{ function('wp_footer') }}
+{% endblock %}
+
+<script src="{{site.theme.link}}/dist/assets/js/app.js"></script>
+</body>
 </html>
