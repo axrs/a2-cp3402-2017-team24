@@ -35,12 +35,12 @@
 		</section>
 
 		{% block footer %}
-			<footer id="footer">
+			<footer id="footer" class="footer section">
 				{% include 'footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
 
-		<script src="{{site.theme.link}}/dist/assets/js/app.js"></script>
+        <script src="{{site.theme.link}}/dist/assets/js/app.js"></script>
 	</body>
 </html>
