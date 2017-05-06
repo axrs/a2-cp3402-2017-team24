@@ -1,29 +1,16 @@
 <div class="row large-text-left medium-text-center text-center">
     <div class="large-3 medium-6 columns">
-        <h5>Our Divisions</h5>
-        <ul class="menu vertical">
-            <li><a href="#">Working Dogs &amp; Horses</a></li>
-            <li><a href="ultimate-rural-training-centre.html">Ultimate Rural Training Centre</a></li>
-            <li><a href="#">Toomby Equine Muscular Therapy</a></li>
-            <li><a href="#">EMM-TECH</a></li>
-        </ul>
+        {% include "footer/menu.twig" with {'menu': footer_left_menu } %}
     </div>
     <div class="large-3 medium-6 columns">
-        <h5>Discover Toomby</h5>
-        <ul class="menu vertical">
-            <li><a href="#">News &amp; Media</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About Us</a></li>
-        </ul>
+        {% include "footer/menu.twig" with {'menu': footer_middle_menu} %}
     </div>
     <div class="large-3 medium-6 columns">
         <h5>Find Us</h5>
         {{ site_options.address }}
     </div>
     <div class="large-3 medium-6 columns end">
-        <h5>Our Sponsors</h5>
-        <a href="#">Toomby Horsemanship would not be possible without our amazing sponsors.</a>
+        {% include "footer/menu.twig" with {'menu': footer_right_menu} %}
 
         {% if site_options.facebook_url or site_options.twitter_url or site_options.linkedin_url %}
         <h5>Social Media</h5>

@@ -27,9 +27,9 @@ function register_my_menus()
 {
     register_nav_menus(
         array(
-            'footer-left-menu' => __('Footer Left'),
-            'footer-middle-menu' => __('Footer Middle'),
-            'footer-right-menu' => __('Footer Right')
+            'footer_left_menu' => __('Footer Left'),
+            'footer_middle_menu' => __('Footer Middle'),
+            'footer_right_menu' => __('Footer Right')
         )
     );
 }
@@ -66,29 +66,25 @@ class StarterSite extends TimberSite
 
     function add_to_context($context)
     {
-        $context['foo'] = 'bar';
-        $context['stuff'] = 'I am a value set in your functions.php file';
-        $context['notes'] = 'These values are available everytime you call Timber::get_context();';
         $context['menu'] = new TimberMenu();
-        $context['footer_left_menu'] = new TimberMenu("footer-left-menu");
-        $context['footer_middle_menu'] = new TimberMenu("footer-middle-menu");
-        $context['footer_right_menu'] = new TimberMenu("footer-right-menu");
-
         $context['site'] = $this;
-        return $context;
-    }
 
-    function myfoo($text)
-    {
-        $text .= ' bar!';
-        return $text;
+        // Other menu items
+        $locations = get_nav_menu_locations();
+        $menus = array('footer_right_menu', 'footer_middle_menu', 'footer_left_menu');
+
+        foreach ($menus as $m) {
+            if ($locations[$m]) {
+                $context[$m] = new TimberMenu($m);
+            }
+        }
+        return $context;
     }
 
     function add_to_twig($twig)
     {
         /* this is where you can add your own functions to twig */
         $twig->addExtension(new Twig_Extension_StringLoader());
-        $twig->addFilter('myfoo', new Twig_SimpleFilter('myfoo', array($this, 'myfoo')));
         return $twig;
     }
 
