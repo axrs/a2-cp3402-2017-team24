@@ -2,7 +2,7 @@
     {% if section.image_link %}
     <a href="#" class="thumbnail">
         {% endif %}
-        <img src="{{ TimberImage(section.image).src }}" alt="{{ section.image_caption | striptags }}">
+        <img src="{{ TimberImage(section.image).src | resize(400) }}" alt="{{ section.image_caption | striptags }}">
         {% if section.image_link %}
     </a>
     {% endif %}

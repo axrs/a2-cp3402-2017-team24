@@ -24,6 +24,9 @@
                 </dl>
             </div>
             {% endif %}
+            <div class="medium-8 medium-centered columns hide-for-large conditions">
+                {{ post.custom.disclaimer|wpautop }}
+            </div>
         </div>
     </section>
     {% include "sections/faq.twig" %}
