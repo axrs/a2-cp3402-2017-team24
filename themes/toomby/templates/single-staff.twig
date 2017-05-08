@@ -29,9 +29,11 @@
                 </ul>
             </div>
             {% endif %}
-
         </div>
     </div>
 </section>
+
+{% include "sections/other-staff.twig" with {'staff' : related_posts} %}
+
 {% endblock %}
 

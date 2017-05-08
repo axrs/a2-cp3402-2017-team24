@@ -1,0 +1,14 @@
+<section class="other-staff section">
+    <div class="row">
+        <h3>Other Staff Members</h3>
+
+        {% for member in staff %}
+        <div class="large-3 medium-6 columns image card staff small-centered">
+            <h4 class="title">{{ member.title }}</h4>
+            <a href="{{ member.link }}" title="View {{ member.title }}'s profile">
+                <img src="{{ TimberImage(member.image).src | resize(200, 200) }}" alt="{{ member.title }}">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
