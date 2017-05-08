@@ -18,6 +18,12 @@ if (function_exists('acf_add_options_page')) {
     ));
 }
 
+include_once('additional_sections.php');
 include_once('contact_details.php');
+include_once('course_units.php');
+include_once('disclaimer.php');
+include_once('frequently_asked_questions.php');
+include_once('hero.php');
 include_once('social_media_links.php');
+
 add_filter('acf_the_content', 'wpautop');
