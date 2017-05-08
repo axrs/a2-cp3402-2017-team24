@@ -42,6 +42,16 @@ function create_post_types()
             'has_archive' => true,
         )
     );
+    register_post_type('staff',
+        array(
+            'labels' => array(
+                'name' => __('Staff'),
+                'singular_name' => __('staff')
+            ),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
 }
 
 add_action('init', 'create_post_types');
