@@ -1,3 +1,22 @@
 {% if section %}
-<pre> {{ section | print_r }}</pre>
+<section class="faq section">
+    <div class="row">
+        <div class="columns">
+            <h3>{{ section.title }}</h3>
+
+            {% if section.image and section.image_side == 'left' %}
+            {% include "sections/generic-image.twig" %}
+            {% endif %}
+
+            <div class="{% if section.image %} medium-8 {% endif %} columns">
+                {{ section.content | wpautop }}
+            </div>
+
+            {% if section.image and section.image_side == 'right' %}
+            {% include "sections/generic-image.twig" %}
+            {% endif %}
+
+        </div>
+    </div>
+</section>
 {% endif %}

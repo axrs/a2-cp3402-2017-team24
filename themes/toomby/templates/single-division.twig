@@ -27,9 +27,9 @@
         </div>
     </section>
     {% include "sections/faq.twig" %}
+    {% for section in post.get_field('sections') %}
+    {% include "sections/generic.twig" with {'section': section} %}
+    {% endfor %}
 </div>
-<pre>
-{{ post | print_r }}
-</pre>
 {% endblock %}
 
