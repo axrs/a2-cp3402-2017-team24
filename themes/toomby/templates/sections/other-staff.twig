@@ -1,9 +1,18 @@
-<section class="other-staff section">
+<section class="other-staff section box">
     <div class="row">
         <h3>Other Staff Members</h3>
 
         {% for member in staff %}
-        <div class="large-3 medium-6 columns image card staff small-centered">
+        <div class="large-3 medium-6 columns image card staff
+                     {% if staff | length == 1 %}
+                        large-centered
+                     {% elseif staff | length == 2 and loop.index == 1 %}
+                        large-offset-3
+                     {% elseif staff | length == 3 and loop.index == 1 %}
+                        large-offset-1-5
+                     {% elseif loop.index == staff | length %}
+                        end
+                     {% endif %}">
             <h4 class="title">{{ member.title }}</h4>
             <a href="{{ member.link }}" title="View {{ member.title }}'s profile">
                 <img src="{{ TimberImage(member.image).src | resize(200, 200) }}" alt="{{ member.title }}">

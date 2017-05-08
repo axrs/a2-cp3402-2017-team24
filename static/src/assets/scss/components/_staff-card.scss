@@ -2,5 +2,9 @@
 $staff-card-height: 300px;
 
 .image.card.staff {
-    height: $staff-card-height;
+  height: $staff-card-height;
+}
+
+.large-offset-1-5 {
+  margin-left: 12.5%;
 }

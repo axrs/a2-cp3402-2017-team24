@@ -15,7 +15,9 @@ $context['post'] = $post;
 
 $related_query = array(
     'post_type' => $post->post_type,
-    'post__not_in' => array($post->ID)
+    'post__not_in' => array($post->ID),
+    'orderby' => ($post->post_type == 'staff') ? 'rand' : 'desc',
+    'posts_per_page' => ($post->post_type == 'staff') ? 4 : 3
 );
 
 $context['related_posts'] = Timber::get_posts($related_query);
