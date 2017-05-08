@@ -46,7 +46,7 @@ function create_post_types()
         array(
             'labels' => array(
                 'name' => __('Staff'),
-                'singular_name' => __('staff')
+                'singular_name' => __('Staff')
             ),
             'public' => true,
             'has_archive' => true,
