@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<div class="training">
+    {% include "sections/hero.twig" %}
+    <section class="overview">
+        <div class="row">
+            <div class="{% if post.course_units %} large-6 {% endif %} columns">
+                {{ post.content }}
+
+                <div class="show-for-large conditions">
+                    {{ post.custom.disclaimer|wpautop }}
+                </div>
+            </div>
+
+            {% if post.course_units %}
+            <div class="large-6 columns">
+                <h3>Units</h3>
+                <dl>
+                    {% for unit in post.get_field('course_units') %}
+                    <dt>{{ unit.code }}</dt>
+                    <dd>{{ unit.description }}</dd>
+                    {% endfor %}
+                </dl>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+    {% include "sections/faq.twig" %}
+</div>
+<pre>
+{{ post | print_r }}
+</pre>
+{% endblock %}
+
