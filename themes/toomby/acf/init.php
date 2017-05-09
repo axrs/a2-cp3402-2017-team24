@@ -25,5 +25,6 @@ include_once('disclaimer.php');
 include_once('frequently_asked_questions.php');
 include_once('hero.php');
 include_once('social_media_links.php');
+include_once('article.php');
 
 add_filter('acf_the_content', 'wpautop');
