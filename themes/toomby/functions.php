@@ -6,6 +6,11 @@ function my_acf_settings_dir( $dir ) {
     $dir = get_stylesheet_directory_uri() . '/plugins/advanced-custom-fields-pro/';
     return $dir;
 }
+// Maps
+function myacf_init(){
+	acf_update_setting('google_api_key', 'AIzaSyAAFdy6HjA3FwsSAniy2Znro161tBK2t2M')
+}
+add_action('acf/init', 'my_acf_init');
 
 include_once('plugins/advanced-custom-fields-pro/acf.php');
 include_once('acf/init.php');
