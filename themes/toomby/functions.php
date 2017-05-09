@@ -1,15 +1,6 @@
 <?php
 
-add_filter('acf/settings/dir', 'my_acf_settings_dir');
-
-function my_acf_settings_dir($dir)
-{
-    $dir = get_stylesheet_directory_uri() . '/plugins/advanced-custom-fields-pro/';
-    return $dir;
-}
-
-include_once('plugins/advanced-custom-fields-pro/acf.php');
-include_once('acf/init.php');
+include_once('wp-extensions.php');
 
 if (!class_exists('Timber')) {
     add_action('admin_notices', function () {
@@ -22,19 +13,6 @@ if (!class_exists('Timber')) {
 
     return;
 }
-
-function register_my_menus()
-{
-    register_nav_menus(
-        array(
-            'footer_left_menu' => __('Footer Left'),
-            'footer_middle_menu' => __('Footer Middle'),
-            'footer_right_menu' => __('Footer Right')
-        )
-    );
-}
-
-add_action('init', 'register_my_menus');
 
 Timber::$dirname = array('templates', 'views');
 
