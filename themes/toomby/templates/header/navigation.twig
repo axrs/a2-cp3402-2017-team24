@@ -1,0 +1,17 @@
+{% if menu %}
+<ul class="vertical medium-horizontal dropdown menu" data-dropdown-menu="dvv26d-dropdown-menu" role="menubar">
+    {% for item in menu %}
+
+    {% if item.get_children %}
+    <li role="menuitem" class="is-dropdown-submenu-parent opens-left">
+        <a href="{{item.get_link}}" title="{{item.title}}">{{item.title}}</a>
+        {% include "header/sub-navigation.twig" with {'menu': item.get_children} %}
+    </li>
+    {% else %}
+    <li role="menuitem">
+        <a href="{{item.get_link}}" title="{{item.title}}">{{item.title}}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}

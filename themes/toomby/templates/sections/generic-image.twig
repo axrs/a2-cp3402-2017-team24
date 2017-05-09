@@ -1,0 +1,10 @@
+<div class="medium-4 columns">
+    {% if section.image_link %}
+    <a href="#" class="thumbnail">
+        {% endif %}
+        <img src="{{ TimberImage(section.image).src | resize(400) }}" alt="{{ section.image_caption | striptags }}">
+        {% if section.image_link %}
+    </a>
+    {% endif %}
+    {{ section.image_caption | wpautop }}
+</div>
