@@ -28,6 +28,10 @@ function loadConfig() {
 gulp.task('build',
  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
 
+ // Build the "dist" folder for the *theme*
+gulp.task('dist',
+  gulp.series(clean, gulp.parallel(sass_theme, javascript_theme, copy_theme)));
+
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', server, watch));
@@ -44,6 +48,12 @@ function copy() {
   return gulp.src(PATHS.assets)
     .pipe(gulp.dest(PATHS.dist + '/assets'));
 }
+
+function copy_theme() {
+  return gulp.src(PATHS.assets)
+    .pipe(gulp.dest(PATHS.dist_theme + '/assets'));
+}
+
 
 // Copy page templates into finished HTML files
 function pages() {
@@ -104,6 +114,36 @@ function javascript() {
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
+}
+
+function sass_theme() {
+  return gulp.src('src/assets/scss/app.scss')
+    .pipe($.sourcemaps.init())
+    .pipe($.sass({
+      includePaths: PATHS.sass
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: COMPATIBILITY
+    }))
+    // Comment in the pipe below to run UnCSS in production
+    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    .pipe($.if(PRODUCTION, $.cssnano()))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist_theme+ '/assets/css'))
+    .pipe(browser.reload({ stream: true }));
+}
+
+function javascript_theme() {
+  return gulp.src(PATHS.javascript)
+    .pipe($.sourcemaps.init())
+    .pipe($.babel({ignore: ['what-input.js']}))
+    .pipe($.concat('app.js'))
+    .pipe($.if(PRODUCTION, $.uglify()
+      .on('error', e => { console.log(e); })
+    ))
+    .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe(gulp.dest(PATHS.dist_theme + '/assets/js'));
 }
 
 // Copy images to the "dist" folder
