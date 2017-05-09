@@ -1,0 +1,51 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<section class="sub-form section box">
+    <form action="#" class="row medium-4">
+        <h3>Subscribe to our mailing list</h3>
+        <p>Keep up to date with our services and products.</p>
+        <div class="input-group">
+            <span class="input-group-label">Email</span>
+            <input class="input-group-field" type="text">
+            <div class="input-group-button">
+                <input type="submit" class="button" value="Submit">
+            </div>
+        </div>
+    </form>
+</section>
+<section class="contact-form">
+    <div class="row">
+        <div class="large-6 columns contact-box">
+            <h3>Contact Us</h3>
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+                <label for="name">Phone:</label>
+                <input type="text" name="phone" required>
+                <label for="name">Email:</label>
+                <input type="text" name="email" required>
+                <label for="name">City/Town:</label>
+                <input type="text" name="city">
+                <label for="message">Message:</label>
+                <textarea name="mesage"></textarea>
+                <input type="submit" name="submit" class="expanded button">
+            </form>
+        </div>
+        <div class="large-6 columns">
+            <h3>Details</h3>
+            <dl class="contact-list">
+                <dt>Email:</dt>
+                <dd><a href="mailto:dalesedgman73@gmail.com?Subject=Site20%Enquiry">{{post.get_field('email')}}</a></dd>
+                <dt>Postal Address:</dt>
+                <dd>{{post.get_field('postal_address')}}</dd>
+                <dt>Phone Numbers:</dt>
+                <dd><strong>Office:</strong> 07 4788 8222<br>
+                    <strong>Geoff:</strong> 0427 637 465<br>
+                    <strong>Vicki:</strong> 0438 637 465<br>
+                    <strong>Juliane:</strong> 0407 613 753</dd>
+            </dl>
+        </div>
+    </div>
+</section>
+{% endblock %}
