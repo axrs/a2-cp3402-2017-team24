@@ -1,0 +1,8 @@
+{% if menu %}
+<h5>{{ menu.title }}</h5>
+<ul class="menu vertical">
+    {% for item in menu.get_items %}
+    <li><a href="{{item.get_path}}" title="{{item.title}}">{{item.title}}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}

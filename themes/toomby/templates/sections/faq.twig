@@ -1,0 +1,18 @@
+{% if post.faq %}
+
+<section class="faq section">
+    <div class="row">
+        <div class="columns">
+            <h3>Frequently Asked Questions</h3>
+        </div>
+        <div class="small-up-1 medium-up-2 large-up-2">
+            {% for q in post.get_field('faq') %}
+            <div class="column column-blok">
+                <h4>{{ q.question }}</h4>
+                {{ q.answer | wpautop }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

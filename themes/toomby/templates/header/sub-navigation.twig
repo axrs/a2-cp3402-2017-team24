@@ -1,0 +1,9 @@
+{% if menu %}
+<ul class="menu vertical submenu is-dropdown-submenu first-sub" data-submenu="" role="menu">
+    {% for item in menu %}
+    <li role="menuitem" class="is-submenu-item is-dropdown-submenu-item">
+        <a href="{{item.get_link}}" title="{{item.title}}">{{item.title}}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
