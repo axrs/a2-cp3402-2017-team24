@@ -1,7 +1,7 @@
 <?php
 $context = Timber::get_context();
+$context['site_options'] = get_fields('options');
 $context['posts'] = Timber::get_posts();
-$context['foo'] = 'bar';
 
 $templates = array('index.twig');
 
