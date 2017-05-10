@@ -6,25 +6,6 @@ if (function_exists('acf_add_local_field_group')):
               'key' => 'group_5912505cd9c40',
               'title' => 'Article',
               'fields' => array(
-                array(
-                      'key' => 'field_5912506450da1',
-                      'label' => 'Title',
-                      'name' => 'title',
-                      'type' => 'text',
-                      'instructions' => 'The title of the article. Try to keep this less than 100 letters.',
-                      'required' => 1,
-                      'conditional_logic' => 0,
-                      'wrapper' => array(
-                          'width' => '',
-                          'class' => '',
-                          'id' => ''
-                      ),
-                      'default_value' => '',
-                      'placeholder' => '',
-                      'prepend' => '',
-                      'append' => '',
-                      'maxlength' => ''
-                  ),
                   array(
                       'key' => 'field_5912507350da2',
                       'label' => 'Author',
@@ -67,25 +48,6 @@ if (function_exists('acf_add_local_field_group')):
                       'max_height' => '',
                       'max_size' => '',
                       'mime_types' => ''
-                  ),
-                  array(
-                      'key' => 'field_5912509450da4',
-                      'label' => 'Content',
-                      'name' => 'content',
-                      'type' => 'wysiwyg',
-                      'instructions' => 'The content of the article, including text and images',
-                      'required' => 1,
-                      'conditional_logic' => 0,
-                      'wrapper' => array(
-                          'width' => '',
-                          'class' => '',
-                          'id' => ''
-                      ),
-                      'default_value' => '',
-                      'tabs' => 'all',
-                      'toolbar' => 'full',
-                      'media_upload' => 1,
-                      'delay' => 0
                   ),
                   array(
                       'key' => 'field_591250b950da5',

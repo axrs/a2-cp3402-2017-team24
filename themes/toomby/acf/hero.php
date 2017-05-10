@@ -78,12 +78,12 @@ if (function_exists('acf_add_local_field_group')):
                 ),
             ),
             array(
-              array(
-                  'param' => 'post_type',
-                  'operator' => '==',
-                  'value' => 'article',
-              ),
-            )
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'article',
+                ),
+            ),
         ),
         'menu_order' => 10,
         'position' => 'normal',
