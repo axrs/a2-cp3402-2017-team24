@@ -17,8 +17,11 @@
         padding-bottom: $spacing-small;
     }
     img {
-        display: block;
-        margin: 0 auto;
+        display: inline;
+        float: left;
+        margin-right: $spacing-large;
         margin-bottom: $spacing-large;
+        max-width: 40%;
+        height: auto;
     }
 }
