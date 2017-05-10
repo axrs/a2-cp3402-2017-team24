@@ -2,19 +2,12 @@
 
 {% block content %}
 
-<section class="article-hero">
-    <div class="row">
-        <div class="medium-8 medium-centered columns">
-            <h1>{{ post.custom.title }}</h1>
-            <p>{{ post.custom.author }}</p>
-        </div>
-    </div>
-</section>
+{% include "sections/hero.twig" %}
 
 <section class="article-content">
     <div class="row">
         <div>
-          <img src="{{ TimberImage(post.custom.image).src }}" class="thumbnail">
+          <img src="{{ TimberImage(post.custom.image).src }}" class="thumbnail" alt="{{ TimberImage(post.custom.image).alt }}">
           {{ post.custom.content | wpautop }}
         </div>
     </div>
