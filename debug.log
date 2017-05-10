@@ -16,3 +16,6 @@
 [09-May-2017 23:38:48 UTC] PHP Fatal error:  Cannot redeclare my_acf_settings_dir() (previously declared in /srv/www/toomby/htdocs/wp-content/themes/toomby/functions.php:4) in /srv/www/toomby/htdocs/wp-content/themes/toomby/wp-extensions.php on line 3
 [09-May-2017 23:38:57 UTC] PHP Fatal error:  Cannot redeclare my_acf_settings_dir() (previously declared in /srv/www/toomby/htdocs/wp-content/themes/toomby/functions.php:4) in /srv/www/toomby/htdocs/wp-content/themes/toomby/wp-extensions.php on line 3
 [09-May-2017 23:40:05 UTC] PHP Fatal error:  Cannot redeclare my_acf_settings_dir() (previously declared in /srv/www/toomby/htdocs/wp-content/themes/toomby/functions.php:4) in /srv/www/toomby/htdocs/wp-content/themes/toomby/wp-extensions.php on line 3
+[10-May-2017 06:18:35 UTC] PHP Notice:  Undefined index: footer_right_menu in /srv/www/toomby/htdocs/wp-content/themes/toomby/functions.php on line 59
+[10-May-2017 06:18:35 UTC] PHP Notice:  Undefined index: footer_middle_menu in /srv/www/toomby/htdocs/wp-content/themes/toomby/functions.php on line 59
+[10-May-2017 06:18:35 UTC] PHP Notice:  Undefined index: footer_left_menu in /srv/www/toomby/htdocs/wp-content/themes/toomby/functions.php on line 59
