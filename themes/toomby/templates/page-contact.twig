@@ -61,12 +61,9 @@
 	</section>
 	<section class="map-section">
 	    <div class="row map-row">
-			
-			{# <p>{{ site_options.google_map | print_r }}</p> #}
-
 			{% if site_options.google_map %}
+			<h3>Where to Find Us</h3>
 			<div class="acf-map map" id="map">
-				<h3></h3><p></p>
 			</div>
 
 	        <script>
@@ -76,12 +73,8 @@
 	        var lng = Number(googleMapsInfo.lng);
 	        var address = googleMapsInfo.address;
 	        var siteTitle = siteInfo.name;
-
 	        var content = "<h4>" + siteTitle + "</h4><p>" + address + "</p>";
-
-
-	        // alert(siteTitle);
-			
+	        
 	        function initMap() {
 	            var location = {
 	                lat: lat,
