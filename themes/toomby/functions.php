@@ -2,10 +2,12 @@
 
 include_once('wp-extensions.php');
 
-function my_acf_google_map_api( $api ){
-        $api['key'] = 'AIzaSyAAFdy6HjA3FwsSAniy2Znro161tBK2t2M';
-        return $api;
-    };
+function my_acf_google_map_api( $api )
+{
+    $api['key'] = 'AIzaSyAAFdy6HjA3FwsSAniy2Znro161tBK2t2M';
+    return $api;
+};
+
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 if (!class_exists('Timber')) {
@@ -13,11 +15,12 @@ if (!class_exists('Timber')) {
         echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url(admin_url('plugins.php#timber')) . '">' . esc_url(admin_url('plugins.php')) . '</a></p></div>';
     });
 
-
     add_filter('template_include', function ($template) {
         return get_stylesheet_directory() . '/static/no-timber.html';
     });
+
     return;
+
 }
 
 Timber::$dirname = array('templates', 'views');
