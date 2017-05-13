@@ -9,12 +9,13 @@
  * @since    Timber 0.1
  */
 
+include_once("ToombyPost.php");
 $context = Timber::get_context();
-$post = Timber::query_post();
+$post = new ToombyPost();
 $context['post'] = $post;
 
-if ( post_password_required( $post->ID ) ) {
-	Timber::render( 'single-password.twig', $context );
+if (post_password_required($post->ID)) {
+    Timber::render('single-password.twig', $context);
 } else {
-	Timber::render( array( 'single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig' ), $context );
+    Timber::render(array('single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig'), $context);
 }

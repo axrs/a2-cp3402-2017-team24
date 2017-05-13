@@ -1,0 +1,39 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<section class="staff-information">
+    <div class="row">
+        <div class="show-for-small-only small-6 small-centered columns">
+            <img src="{{ TimberImage(post.image).src | resize(300, 300) }}"
+                 alt="{{ post.title }}">
+        </div>
+
+        <div class="medium-8 medium-push-4 columns staff-details">
+            <h1>{{ post.title }}</h1>
+            {% if post.position %}<h2 class="subtitle">{{ post.position }}</h2>{% endif %}
+            {{ post.content }}
+        </div>
+
+        <div class="medium-4 medium-pull-8 columns staff-aside">
+            <img class="show-for-medium"
+                 src="{{ TimberImage(post.image).src | resize(300, 300) }}"
+                 alt="{{ post.title }}">
+
+            {% if post.qualifications %}
+            <div class="qualifications">
+                <h2>{{ post.title }}'s list of qualifications include:</h2>
+                <ul>
+                    {% for q in post.get_field('qualifications') %}
+                    <li>{{ q.qualification }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% include "sections/other-staff.twig" with {'staff' : post.staff(4) } %}
+
+{% endblock %}
+

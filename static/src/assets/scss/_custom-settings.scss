@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $color-primary;
 }
 
-section + section {
+section + section, .top-bar + section {
   margin-top: $spacing-huge;
 }
 
@@ -68,5 +68,17 @@ p {
 }
 
 .button.round {
-    border-radius: 1000px;
+  border-radius: 1000px;
+}
+
+@media print, screen and (min-width: 40em) {
+  .medium-offset-1-5 {
+    margin-left: 12.5%;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .large-offset-1-5 {
+    margin-left: 12.5%;
+  }
 }
