@@ -4,7 +4,7 @@
         <h2>Related News</h2>
 
         {% for article in post.related() %}
-        <div class="medium-4 columns card" data-equalizer-watch>
+        <div class="medium-4 columns card end" data-equalizer-watch>
             <div class="card-section">
                 <span class="date">{{article.date}}</span>
                 <h3>{{article.title}}</h3>
