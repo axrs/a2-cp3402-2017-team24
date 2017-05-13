@@ -16,6 +16,10 @@
     color: $white;
   }
 
+  h1 {
+    text-shadow: $hero-text-shadow;
+  }
+
   img {
     max-width: $hero-image-width;
   }
