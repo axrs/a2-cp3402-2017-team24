@@ -55,13 +55,15 @@ class ToombyPost extends TimberPost
         return $this->staff(100);
     }
 
-    public function articles($limit = 3)
+    public function articles($limit = 3, $exclude_self = false)
     {
+      $exclude = ($exclude_self) ? array($this->ID) : array();
+
         $article_query = array(
             'post_type' => 'article',
             'orderby' => 'desc',
             'limit' => $limit,
-            'post__not_in' => array()
+            'post__not_in' => $exclude
         );
         return $this->query($article_query);
     }
