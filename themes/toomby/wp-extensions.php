@@ -18,6 +18,7 @@ function register_my_menus()
 {
     register_nav_menus(
         array(
+            'main_menu' => __('Main Menu'),
             'footer_left_menu' => __('Footer Left'),
             'footer_middle_menu' => __('Footer Middle'),
             'footer_right_menu' => __('Footer Right')
@@ -32,6 +33,16 @@ add_action('init', 'register_my_menus');
  */
 function create_post_types()
 {
+    register_post_type('sponsor',
+        array(
+            'labels' => array(
+                'name' => __('Sponsors'),
+                'singular_name' => __('Sponsor')
+            ),
+            'public' => true,
+            'has_archive' => false,
+        )
+    );
     register_post_type('division',
         array(
             'labels' => array(
