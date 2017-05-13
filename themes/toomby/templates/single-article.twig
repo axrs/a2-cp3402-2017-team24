@@ -6,9 +6,8 @@
 
 <section class="article-content">
     <div class="row">
-        <div>
-          <img src="{{ TimberImage(post.custom.image).src }}" class="thumbnail" alt="{{ TimberImage(post.custom.image).alt }}">
-          {{ post.content | wpautop }}
+        <div class="medium-10 medium-centered columns">
+            {{ post.content | wpautop }}
         </div>
     </div>
 </section>
