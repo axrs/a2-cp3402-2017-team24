@@ -63,6 +63,17 @@ function create_post_types()
             'has_archive' => false,
         )
     );
+
+    register_post_type('article',
+        array(
+            'labels' => array(
+                'name' => __('Articles'),
+                'singular_name' => __('Article')
+            ),
+            'public' => true,
+            'has_archive' => true,
+        )
+    );
 }
 
 add_action('init', 'create_post_types');

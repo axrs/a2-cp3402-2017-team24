@@ -24,6 +24,7 @@ if (function_exists('acf_add_options_page')) {
 }
 
 include_once('additional_sections.php');
+include_once('article.php');
 include_once('contact_details.php');
 include_once('course_units.php');
 include_once('disclaimer.php');

@@ -7,7 +7,7 @@
     <div class="row">
         <h1>{{ post.title }}</h1>
         <div class="medium-9 medium-centered columns box">
-            <p class="lead">{{ post.hero_subtitle }}</p>
+            <p class="lead">{{ post.custom.author ? "By: #{post.custom.author}" : post.hero_subtitle }}</p>
             {{ post.hero_description | wpautop }}
         </div>
     </div>

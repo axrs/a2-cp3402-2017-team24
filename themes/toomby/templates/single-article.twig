@@ -1,0 +1,18 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{% include "sections/hero.twig" %}
+
+<section class="article-content">
+    <div class="row">
+        <div>
+          <img src="{{ TimberImage(post.custom.image).src }}" class="thumbnail" alt="{{ TimberImage(post.custom.image).alt }}">
+          {{ post.content | wpautop }}
+        </div>
+    </div>
+</section>
+
+{% include "sections/article-card.twig" %}
+
+{% endblock %}
