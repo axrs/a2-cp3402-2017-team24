@@ -1,7 +1,11 @@
 {% if staff %}
 <section class="other-staff section box">
     <div class="row">
+        {% if title %}
+        <h3>{{ title }}</h3>
+        {% else %}
         <h3>Other Staff Members</h3>
+        {% endif %}
 
         {% for member in staff %}
         <div class="large-3 medium-3 small-6 columns square image card staff
