@@ -1,0 +1,19 @@
+{% if post.related()|length > 0 %}
+<section class="latest-news section box" data-equalizer data-equalize-on="medium">
+    <div class="row">
+        <h2>Related News</h2>
+
+        {% for article in post.related() %}
+        <div class="medium-4 columns card end" data-equalizer-watch>
+            <div class="card-section">
+                <span class="date">{{article.date}}</span>
+                <h3>{{article.title}}</h3>
+                <p>{{article.teaser_text}}</p>
+                <a href="{{article.link}}">Read more</a>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+{% endif %}

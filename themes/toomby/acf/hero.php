@@ -35,7 +35,7 @@ if (function_exists('acf_add_local_field_group')):
                 'label' => 'Subtitle',
                 'name' => 'hero_subtitle',
                 'type' => 'text',
-                'instructions' => 'Provide an optional subtitle to be displayed in a box over the background image',
+                'instructions' => 'Provide an optional subtitle to be displayed in a box over the background image. Not needed on articles.',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
@@ -77,8 +77,15 @@ if (function_exists('acf_add_local_field_group')):
                     'value' => 'division',
                 ),
             ),
-            array (
-                array (
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'article',
+                  ),
+                ),
+            array(
+                array(
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'page',

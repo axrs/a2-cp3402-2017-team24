@@ -34,7 +34,7 @@ class ToombyPost extends TimberPost
             'orderby' => 'desc',
             'posts_per_page' => $limit
         );
-        return query($related_query);
+        return $this->query($related_query);
     }
 
     public function staff($limit, $exclude_self = true)
