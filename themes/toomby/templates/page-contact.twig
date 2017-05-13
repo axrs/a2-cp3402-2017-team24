@@ -1,0 +1,109 @@
+{% extends "base.twig" %}
+{% block content %}
+	<section class="sub-form section box">
+	    <form action="#" class="row medium-4">
+	        <h3>Subscribe to our mailing list</h3>
+	        <p>Keep up to date with our services and products.</p>
+	        <div class="input-group">
+	            <span class="input-group-label">Email</span>
+	            <input class="input-group-field" type="text">
+	            <div class="input-group-button">
+	                <input type="submit" class="button" value="Submit">
+	            </div>
+	        </div>
+	    </form>
+	</section>
+	<section class="contact-form">
+	    <div class="row">
+	        <div class="large-6 columns contact-box">
+	            <h3>Contact Us</h3>
+	            <form action="#">
+	                <label for="name">Name:</label>
+	                <input type="text" name="name" required>
+	                <label for="name">Phone:</label>
+	                <input type="text" name="phone" required>
+	                <label for="name">Email:</label>
+	                <input type="text" name="email" required>
+	                <label for="name">City/Town:</label>
+	                <input type="text" name="city">
+	                <label for="message">Message:</label>
+	                <textarea name="mesage"></textarea>
+	                <input type="submit" name="submit" class="expanded button">
+	            </form>
+	        </div>
+	        <div class="large-6 columns">
+	            <h3>Details</h3>
+	            <dl class="contact-list">
+	                <dt>Email:</dt>
+	                <dd>
+	                	<a href="mailto:dalesedgman73@gmail.com?Subject=Site20%Enquiry">
+	                	{{site.admin_email}}
+	                	</a>
+	            	</dd>
+
+	            	{% if site_options.postal_address %}
+	                <dt>Postal Address:</dt>
+	                <dd>{{site_options.postal_address}}</dd>
+	            	{% endif %}
+
+	            	{% if site_options.phone_numbers %}
+	                <dt>Phone Numbers:</dt>
+	                <dd>				
+					{% for number in site_options.phone_numbers%}
+					<strong>{{number.name}}:</strong> {{number.phone}}<br>
+					{% endfor %}
+	                </dd>
+	            	{% endif %}
+
+	            </dl>
+	        </div>
+	    </div>
+	</section>
+	<section class="map-section">
+	    <div class="row map-row">
+			{% if site_options.google_map %}
+			<h3>Where to Find Us</h3>
+			<div class="acf-map map" id="map">
+			</div>
+
+	        <script>
+	        var googleMapsInfo = {{ site_options.google_map | json_encode()}};
+	        var siteInfo = {{ site | json_encode()}};
+	        var lat = Number(googleMapsInfo.lat);
+	        var lng = Number(googleMapsInfo.lng);
+	        var address = googleMapsInfo.address;
+	        var siteTitle = siteInfo.name;
+	        var content = "<h4>" + siteTitle + "</h4><p>" + address + "</p>";
+	        
+	        function initMap() {
+	            var location = {
+	                lat: lat,
+	                lng: lng
+	            };
+	            var map = new google.maps.Map(document.getElementById('map'), {
+	                zoom: 12,
+	                center: location,
+	                mapTypeId: 'hybrid',
+	                scrollwheel: false
+	            });
+	            var marker = new google.maps.Marker({
+	                position: location,
+	                map: map,
+
+	            });
+	            var infowindow = new google.maps.InfoWindow({
+	                content: content,
+	                position: location,
+	                map: map
+	            });
+
+	            marker.addListener('click', function() {
+	                infowindow.open(map, marker);
+	            });
+	        }
+	        </script>
+	        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAFdy6HjA3FwsSAniy2Znro161tBK2t2M&callback=initMap" async defer></script>
+	    	{% endif %}
+	    </div>
+	</section>
+{% endblock %}
