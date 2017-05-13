@@ -12,6 +12,6 @@
     </div>
 </section>
 
-{% include "sections/article-card.twig" %}
+{% include "sections/article-card.twig" with {'articles': post.articles(3, true)} %}
 
 {% endblock %}
