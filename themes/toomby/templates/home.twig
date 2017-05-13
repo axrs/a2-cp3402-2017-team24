@@ -15,36 +15,19 @@
 <!-- TODO Training Sections -->
 <section class="training">
     <div class="row">
+    {% for post in site_options.posts %}
+    {% set timberPost = TimberPost(post.post.ID) %}
+    {% set image = timberPost.custom.image ? timberPost.custom.image : timberPost.custom.hero_image %}
 
-        <div class="large-3 medium-6 columns">
-            <div class="image card">
-                <h2 class="title">Working Dogs &amp; Horses</h2>
-                <a href="#"><img src="http://www.fillmurray.com/300/400"></a>
-            </div>
+      <div class="large-3 medium-6 columns">
+        <div class="image card">
+          <h2 class="title">{{timberPost.post_title}}</h2>
+          <a href="#"><img src="{{TimberImage(image).src}}"></a>
         </div>
+      </div>
 
-        <div class="large-3 medium-6 columns">
-            <div class="image card">
-                <h2 class="title">Ultimate Rural Training Centre</h2>
-                <a href="ultimate-rural-training-centre.html"><img src="http://www.fillmurray.com/300/400"> </a>
-            </div>
-        </div>
-
-        <div class="large-3 medium-6 columns">
-            <div class="image card">
-                <h2 class="title">(TEMT) Toomby Equine Muscular Therapy</h2>
-                <a href="#"><img src="http://www.fillmurray.com/300/400"> </a>
-            </div>
-        </div>
-
-        <div class="large-3 medium-6 columns">
-            <div class="image card">
-                <h2 class="title">EMM-TECH</h2>
-                <a href="#"><img src="http://www.fillmurray.com/300/400"> </a>
-            </div>
-        </div>
-
-    </div>
+    {% endfor %}
+  </div>
 </section>
 <!-- TODO Training Sections -->
 

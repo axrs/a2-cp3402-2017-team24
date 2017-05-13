@@ -22,8 +22,8 @@ if (function_exists('acf_add_options_page')) {
         'parent_slug' => 'theme-general-settings',
     ));
     acf_add_options_sub_page(array(
-        'page_title' => 'Branding',
-        'menu_title' => 'Branding',
+        'page_title' => 'Homepage',
+        'menu_title' => 'Homepage',
         'parent_slug' => 'theme-general-settings',
     ));
 }
@@ -38,6 +38,6 @@ include_once('social_media_links.php');
 include_once('article.php');
 include_once('staff.php');
 include_once('values.php');
-include_once('branding.php');
+include_once('homepage.php');
 
 add_filter('acf_the_content', 'wpautop');
