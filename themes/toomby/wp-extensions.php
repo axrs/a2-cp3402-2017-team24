@@ -33,6 +33,16 @@ add_action('init', 'register_my_menus');
  */
 function create_post_types()
 {
+    register_post_type('sponsor',
+        array(
+            'labels' => array(
+                'name' => __('Sponsors'),
+                'singular_name' => __('Sponsor')
+            ),
+            'public' => true,
+            'has_archive' => false,
+        )
+    );
     register_post_type('division',
         array(
             'labels' => array(

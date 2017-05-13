@@ -1,0 +1,112 @@
+<?php
+
+if (function_exists('acf_add_local_field_group')):
+
+    acf_add_local_field_group(array(
+        'key' => 'group_59168fab36a25',
+        'title' => 'Sponsors',
+        'fields' => array(
+            array(
+                'key' => 'field_591690e9ffb8d',
+                'label' => 'Logo',
+                'name' => 'logo',
+                'type' => 'image',
+                'instructions' => 'Provide a Sponsor Logo',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'array',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+            array(
+                'key' => 'field_591690ffffb8e',
+                'label' => 'Details',
+                'name' => 'details',
+                'type' => 'repeater',
+                'instructions' => 'Provide any additional sponsor details; such as phone, email or address',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'collapsed' => '',
+                'min' => 0,
+                'max' => 0,
+                'layout' => 'table',
+                'button_label' => 'Add Detail',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'field_59169118ffb8f',
+                        'label' => 'Detail',
+                        'name' => 'detail',
+                        'type' => 'text',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'maxlength' => '',
+                    ),
+                    array(
+                        'key' => 'field_59169121ffb90',
+                        'label' => 'Value',
+                        'name' => 'value',
+                        'type' => 'wysiwyg',
+                        'instructions' => '',
+                        'required' => 1,
+                        'conditional_logic' => 0,
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                        'default_value' => '',
+                        'tabs' => 'all',
+                        'toolbar' => 'basic',
+                        'media_upload' => 0,
+                        'delay' => 1,
+                    ),
+                ),
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'sponsor',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => 1,
+        'description' => '',
+    ));
+
+endif;
