@@ -48,51 +48,25 @@
 </section>
 <!-- TODO Training Sections -->
 
-<!-- TODO Latest News -->
+<!-- TODO Make the article-card more generic -->
 <section class="latest-news section box" data-equalizer data-equalize-on="medium">
     <div class="row">
         <h2>Latest News</h2>
 
-        <div class="medium-4 columns">
-            <div class="card" data-equalizer-watch>
-                <div class="card-section">
-                    <span class="date">20 April, 2017</span>
-                    <h3>Firm Takes Skills Rein</h3>
-                    <p>Phasellus consequat, lacus consequat faucibus accumsan, enim nunc rhoncus velit, vitae elementum
-                        eros
-                        erat nec nulla. Donec in ligula erat.</p>
-                </div>
-                <a href="#" class="read-more">Read More</a>
+        {% for article in post.articles() %}
+        <div class="medium-4 columns card end" data-equalizer-watch>
+            <div class="card-section">
+                <span class="date">{{article.date}}</span>
+                <h3>{{article.title}}</h3>
+                <p>{{article.teaser_text}}</p>
+                <a href="{{article.link}}">Read more</a>
             </div>
         </div>
+        {% endfor %}
 
-        <div class="medium-4 columns">
-            <div class="card" data-equalizer-watch>
-                <div class="card-section">
-                    <span class="date">15 April, 2017</span>
-                    <h3>Working Dogs...</h3>
-                    <p>Phasellus consequat, lacus consequat faucibus accumsan, enim nunc rhoncus velit, vitae elementum
-                        eros
-                        erat nec nulla. Donec in ligula erat.</p>
-                </div>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
-
-        <div class="medium-4 columns">
-            <div class="card" data-equalizer-watch>
-                <div class="card-section">
-                    <span class="date">11 April, 2017</span>
-                    <h3>Animal Educators Horsing Around</h3>
-                    <p>Phasellus consequat, lacus consequat faucibus accumsan, enim nunc rhoncus velit, vitae elementum
-                        eros
-                        erat nec nulla. Donec in ligula erat.</p>
-                </div>
-                <a href="#" class="read-more">Read More</a>
-            </div>
-        </div>
     </div>
 </section>
-<!-- TODO Latest News -->
+
+{# {% include "sections/article-card.twig" %} #}
 
 {% endblock %}
