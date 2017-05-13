@@ -21,6 +21,11 @@ if (function_exists('acf_add_options_page')) {
         'menu_title' => 'Social Media',
         'parent_slug' => 'theme-general-settings',
     ));
+    acf_add_options_sub_page(array(
+        'page_title' => 'Branding',
+        'menu_title' => 'Branding',
+        'parent_slug' => 'theme-general-settings',
+    ));
 }
 
 include_once('additional_sections.php');
@@ -33,5 +38,6 @@ include_once('social_media_links.php');
 include_once('article.php');
 include_once('staff.php');
 include_once('values.php');
+include_once('branding.php');
 
 add_filter('acf_the_content', 'wpautop');
