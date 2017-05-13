@@ -68,5 +68,17 @@ p {
 }
 
 .button.round {
-    border-radius: 1000px;
+  border-radius: 1000px;
+}
+
+@media print, screen and (min-width: 40em) {
+  .medium-offset-1-5 {
+    margin-left: 12.5%;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .large-offset-1-5 {
+    margin-left: 12.5%;
+  }
 }
