@@ -1,0 +1,47 @@
+{% extends "base.twig" %}
+
+
+{% block content %}
+
+<section class="news">
+
+    <h1>News &amp; Media</h1>
+
+    <section class="articles">
+        <div class="row">
+
+          {% set featured = true %}
+
+          {% for article in posts %}
+
+            {% if featured %}
+              {% include "sections/news-featured-article.twig" %}
+              {% set featured = false %}
+            {% else %}
+              {% include "sections/news-article.twig" %}
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
+    </section>
+
+    <section class="pagination">
+        <div class="row">
+          {% if pagination.prev %}
+            <a href="{{page.link}}" class="hollow button large">Previous</a>
+          {% endif %}
+
+          {% for page in pagination.pages %}
+            <a href="{{page.link}}" class="button large">{{page.title}}</a>
+          {% endfor %}
+
+          {% if pagination.next %}
+            <a href="{{page.link}}" class="hollow button large">Next</a>
+          {% endif %}
+        </div>
+    </section>
+
+</section>
+
+{% endblock %}
