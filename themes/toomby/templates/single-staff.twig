@@ -33,7 +33,7 @@
     </div>
 </section>
 
-{% include "sections/other-staff.twig" with {'staff' : related_posts} %}
+{% include "sections/other-staff.twig" with {'staff' : post.staff(4) } %}
 
 {% endblock %}
 
