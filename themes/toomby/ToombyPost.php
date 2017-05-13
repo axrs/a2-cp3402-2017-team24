@@ -34,7 +34,19 @@ class ToombyPost extends TimberPost
             'orderby' => 'desc',
             'posts_per_page' => $limit
         );
-        return query($related_query);
+        return $this->query($related_query);
+    }
+
+    public function sponsors()
+    {
+        $query = array(
+            'post_type' => 'sponsor',
+            'orderby' => 'meta_value_num',
+            'meta_key' => 'priority',
+            'order' => 'asc',
+            'limit' => 100,
+        );
+        return $this->query($query);
     }
 
     public function staff($limit, $exclude_self = true)

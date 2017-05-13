@@ -6,3 +6,4 @@ dist
 !/themes/toomby/dist
 *.swp
 uploads/*
+languages/

@@ -1,0 +1,34 @@
+<dl>
+    {% if sponsor.website_url %}
+    <dt>Website</dt>
+    <dd><a href="{{ sponsor.website_url }}">{{ sponsor.website_url }}</a></dd>
+    {% endif %}
+
+    {% if sponsor.phone %}
+    <dt>Phone</dt>
+    <dd><a href="tel:{{ sponsor.phone }}">{{ sponsor.phone }}</a></dd>
+    {% endif %}
+
+    {% if sponsor.address %}
+    <dt>Address</dt>
+    <dd>{{ sponsor.address | wpautop }}</dd>
+    {% endif %}
+
+    {% if sponsor.facebook_url or sponsor.twitter_url or sponsor.linkedin_url %}
+    <dt>Connect</dt>
+    <dd>
+        {% if sponsor.facebook_url %}
+        <a href="{{ sponsor.facebook_url }}" class="facebook" title="Find {{ sponsor.title }} on Facebook"><i
+                class="fa fa-facebook"></i></a>
+        {% endif %}
+        {% if sponsor.twitter_url %}
+        <a href="{{ sponsor.twitter_url }}" class="twitter" title="Follow {{ sponsor.title }} on Twitter"><i
+                class="fa fa-twitter"></i></a>
+        {% endif %}
+        {% if sponsor.linkedin_url %}
+        <a href="{{ sponsor.linkedin_url }}" class="linkedin"
+           title="Connect with {{ sponsor.title }} on LinkedIn"><i class="fa fa-linkedin"></i></a>
+        {% endif %}
+    </dd>
+    {% endif %}
+</dl>

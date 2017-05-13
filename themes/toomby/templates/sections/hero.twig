@@ -1,13 +1,13 @@
 {% if post.hasHero %}
 <section class="hero"
          {% if post.hero_image %}
-         style="background-image: url({{ TimberImage(post.hero_image).src }})"
+         style="background-image: url({{ TimberImage(post.hero_image).src | resize(1920) }})"
          {% endif %}
 >
     <div class="row">
         <h1>{{ post.title }}</h1>
         <div class="medium-9 medium-centered columns box">
-            <p class="lead">{{ post.hero_subtitle }}</p>
+            <p class="lead">{{ post.custom.author ? "By: #{post.custom.author}" : post.hero_subtitle }}</p>
             {{ post.hero_description | wpautop }}
         </div>
     </div>
