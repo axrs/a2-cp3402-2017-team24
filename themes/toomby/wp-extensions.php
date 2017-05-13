@@ -18,6 +18,7 @@ function register_my_menus()
 {
     register_nav_menus(
         array(
+            'main_menu' => __('Main Menu'),
             'footer_left_menu' => __('Footer Left'),
             'footer_middle_menu' => __('Footer Middle'),
             'footer_right_menu' => __('Footer Right')
