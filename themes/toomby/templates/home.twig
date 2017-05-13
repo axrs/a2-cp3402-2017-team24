@@ -2,20 +2,15 @@
 
 {% block content %}
 
-<!-- TODO Change to settings -->
-<div class="home hero" style="background-image: url('https://local.wordpress.dev/wp-content/uploads/2017/05/urtc-bg.jpg')">
+<div class="home hero" style="background-image: url('{{TimberImage(site_options.primary_hero_background).src}}')">
     <div class="row">
         <div class="medium-8 medium-centered column">
-            <img src="https://local.wordpress.dev/wp-content/uploads/2017/05/logo-main.png">
-            <h1>Welcome to Wonderland Station</h1>
-            <p>Etiam nec risus nec massa ornare dapibus. Vivamus id cursus odio, at porta est. Sed a est justo.
-                Pellentesque efficitur mollis lorem non semper. Nam lacinia ante nunc, vel mattis odio lobortis et.
-                Aliquam eget risus sapien. Nulla facilisi. Nunc pulvinar, mauris ut suscipit tempor, lacus est mattis
-                tortor, eu efficitur risus nibh eget augue. </p>
+            <img src="{{TimberImage(site_options.primary_logo).src}}">
+            <h1>{{site_options.welcome_message}}</h1>
+            <p>{{site_options.description}}</p>
         </div>
     </div>
 </div>
-<!-- TODO Change to settings -->
 
 <!-- TODO Training Sections -->
 <section class="training">
