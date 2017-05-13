@@ -27,12 +27,4 @@ $context = Timber::get_context();
 $post = new ToombyPost();
 $context['post'] = $post;
 
-if ($post->slug == 'about-us' || $post->slug == 'about') {
-    $staff_query = array(
-        'post_type' => 'staff',
-        'orderby' => 'rand'
-    );
-    $context ['staff'] = Timber::get_posts($staff_query);
-}
-
 Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

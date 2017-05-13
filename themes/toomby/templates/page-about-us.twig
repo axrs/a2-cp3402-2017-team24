@@ -30,6 +30,6 @@
 
     </div>
 </section>
-{% include "sections/other-staff.twig" %}
+{% include "sections/other-staff.twig" with {'staff' : post.allStaff} %}
 {% endblock %}
 
