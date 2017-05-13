@@ -12,24 +12,7 @@
     </div>
 </div>
 
-<!-- TODO Training Sections -->
-<section class="training">
-    <div class="row">
-    {% for post in site_options.posts %}
-    {% set timberPost = TimberPost(post.post.ID) %}
-    {% set image = timberPost.custom.image ? timberPost.custom.image : timberPost.custom.hero_image %}
-
-      <div class="large-3 medium-6 columns">
-        <div class="image card">
-          <h2 class="title">{{timberPost.post_title}}</h2>
-          <a href="#"><img src="{{TimberImage(image).src}}"></a>
-        </div>
-      </div>
-
-    {% endfor %}
-  </div>
-</section>
-<!-- TODO Training Sections -->
+{% include "sections/image-card.twig" with {'posts': site_options.posts} %}
 
 {% include "sections/article-card.twig" with {'articles': post.articles()} %}
 

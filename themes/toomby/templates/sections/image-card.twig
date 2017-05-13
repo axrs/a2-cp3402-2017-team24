@@ -1,0 +1,18 @@
+{% if posts %}
+<section class="training">
+    <div class="row">
+    {% for post in posts %}
+    {% set timberPost = TimberPost(post.post.ID) %}
+    {% set image = timberPost.custom.image ? timberPost.custom.image : timberPost.custom.hero_image %}
+
+      <div class="large-3 medium-6 columns">
+        <div class="image card">
+          <h2 class="title">{{timberPost.post_title}}</h2>
+          <a href="#"><img src="{{TimberImage(image).src}}"></a>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
