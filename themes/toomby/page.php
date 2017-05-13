@@ -21,8 +21,10 @@
  * @since    Timber 0.1
  */
 
+include_once("ToombyPost.php");
+
 $context = Timber::get_context();
-$post = new TimberPost();
+$post = new ToombyPost();
 $context['post'] = $post;
 
 if ($post->slug == 'about-us' || $post->slug == 'about') {

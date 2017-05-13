@@ -1,9 +1,12 @@
 {% extends "base.twig" %}
 
 {% block content %}
+{% include "sections/hero.twig" %}
 <section class="about-us">
     <div class="row">
+        {% if post.hasHero == false %}
         <h1>{{ post.title }}</h1>
+        {% endif %}
         <div class="{% if post.image %} large-8 {% endif %} columns">
             {{ post.content }}
         </div>
