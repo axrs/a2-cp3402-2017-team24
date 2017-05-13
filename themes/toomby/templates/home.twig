@@ -48,25 +48,6 @@
 </section>
 <!-- TODO Training Sections -->
 
-<!-- TODO Make the article-card more generic -->
-<section class="latest-news section box" data-equalizer data-equalize-on="medium">
-    <div class="row">
-        <h2>Latest News</h2>
-
-        {% for article in post.articles() %}
-        <div class="medium-4 columns card end" data-equalizer-watch>
-            <div class="card-section">
-                <span class="date">{{article.date}}</span>
-                <h3>{{article.title}}</h3>
-                <p>{{article.teaser_text}}</p>
-                <a href="{{article.link}}">Read more</a>
-            </div>
-        </div>
-        {% endfor %}
-
-    </div>
-</section>
-
-{# {% include "sections/article-card.twig" %} #}
+{% include "sections/article-card.twig" with {'articles': post.articles()} %}
 
 {% endblock %}

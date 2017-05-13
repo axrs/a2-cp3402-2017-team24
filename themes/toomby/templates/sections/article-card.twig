@@ -1,9 +1,9 @@
-{% if post.related()|length > 0 %}
+{% if articles|length > 0 %}
 <section class="latest-news section box" data-equalizer data-equalize-on="medium">
     <div class="row">
         <h2>Related News</h2>
 
-        {% for article in post.related() %}
+        {% for article in articles %}
         <div class="medium-4 columns card end" data-equalizer-watch>
             <div class="card-section">
                 <span class="date">{{article.date}}</span>
