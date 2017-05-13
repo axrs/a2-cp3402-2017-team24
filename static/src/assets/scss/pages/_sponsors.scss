@@ -1,38 +1,42 @@
 /* ---------- _sponsors.scss ---------- */
 .sponsors {
-    h1 {
-        text-align: center;
-    }
+  h1 {
+    text-align: center;
+  }
 
-    p {
-        text-align: center;
-        margin-bottom: $spacing-large;
-    }
+  p {
+    text-align: center;
+    margin-bottom: $spacing-large;
+  }
 }
 
 .sponsor {
+  padding: $spacing-large;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  img {
     padding: $spacing-medium;
+  }
 
-    &:last-child {
-        border-bottom: none;
-    }
+  div {
+    text-align: center;
+  }
 
-    img {
-      padding: $spacing-medium;
-    }
+  h2 {
+    text-align: left;
+    font-size: $font-size-title;
+  }
 
-    div {
-        text-align: center;
-    }
+  p {
+    text-align: left;
+    font-size: $font-size-content;
+    margin-bottom: $spacing-small;
+  }
 
-    h2 {
-        text-align: left;
-        font-size: $font-size-title;
-    }
-
-    p {
-        text-align: left;
-        font-size: $font-size-content;
-        margin-bottom: $spacing-small;
-    }
+  dd p {
+    text-align: right;
+  }
 }
