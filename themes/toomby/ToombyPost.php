@@ -43,7 +43,7 @@ class ToombyPost extends TimberPost
             'post_type' => 'sponsor',
             'orderby' => 'meta_value_num',
             'meta_key' => 'priority',
-            'orderby' => 'asc',
+            'order' => 'asc',
             'limit' => 100,
         );
         return $this->query($query);
