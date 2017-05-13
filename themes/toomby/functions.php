@@ -1,6 +1,11 @@
 <?php
 
-include_once('wp-extensions.php');
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    // Include vendor files if they exist (only required for dist)
+    include_once(__DIR__ . '/vendor/autoload.php');
+}
+
+require_once('wp-extensions.php');
 
 if (!class_exists('Timber')) {
     add_action('admin_notices', function () {
