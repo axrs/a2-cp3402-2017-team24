@@ -82,6 +82,13 @@ if (function_exists('acf_add_local_field_group')):
                     'param' => 'post_type',
                     'operator' => '==',
                     'value' => 'article',
+                  ),
+                ),
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'page',
                 ),
             ),
         ),

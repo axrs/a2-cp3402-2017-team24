@@ -9,18 +9,10 @@
  * @since    Timber 0.1
  */
 
+include_once("ToombyPost.php");
 $context = Timber::get_context();
-$post = Timber::query_post();
+$post = new ToombyPost();
 $context['post'] = $post;
-
-$related_query = array(
-    'post_type' => $post->post_type,
-    'post__not_in' => array($post->ID),
-    'orderby' => ($post->post_type == 'staff') ? 'rand' : 'desc',
-    'posts_per_page' => ($post->post_type == 'staff') ? 4 : 3
-);
-
-$context['related_posts'] = Timber::get_posts($related_query);
 
 if (post_password_required($post->ID)) {
     Timber::render('single-password.twig', $context);

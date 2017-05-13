@@ -49,13 +49,17 @@ $card-height: 400px;
   }
 
   img {
-    float: left;
-    overflow: hidden;
+    display: block;
+    object-fit: cover;
     width: 100%;
-    height: 100%;
+    overflow: hidden;
     opacity: 0.5;
   }
   &:hover img {
     opacity: 1.0;
   }
+}
+
+.square.image.card {
+  overflow: hidden;
 }
