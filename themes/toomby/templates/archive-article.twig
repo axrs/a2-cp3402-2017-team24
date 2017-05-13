@@ -26,17 +26,21 @@
         </div>
     </section>
 
-    <!-- TODO: Pagination -->
     <section class="pagination">
         <div class="row">
-            <a href="#" class="button large">1</a>
-            <a href="#" class="hollow button large">2</a>
-            <a href="#" class="hollow button large">3</a>
-            <a href="#" class="hollow button large">4</a>
-            <a href="#" class="hollow button large">Next</a>
+          {% if pagination.prev %}
+            <a href="{{page.link}}" class="hollow button large">Previous</a>
+          {% endif %}
+
+          {% for page in pagination.pages %}
+            <a href="{{page.link}}" class="button large">{{page.title}}</a>
+          {% endfor %}
+
+          {% if pagination.next %}
+            <a href="{{page.link}}" class="hollow button large">Next</a>
+          {% endif %}
         </div>
     </section>
-    <!-- TODO: Pagination -->
 
 </section>
 
