@@ -26,6 +26,30 @@ if (function_exists('acf_add_local_field_group')):
                       'maxlength' => ''
                   ),
                   array(
+                      'key' => 'field_5912507750da3',
+                      'label' => 'Image',
+                      'name' => 'image',
+                      'type' => 'image',
+                      'instructions' => 'The primary image for the article, used to generate thumbnails in the news gallery',
+                      'required' => 1,
+                      'conditional_logic' => 0,
+                      'wrapper' => array(
+                          'width' => '',
+                          'class' => '',
+                          'id' => ''
+                      ),
+                      'return_format' => 'url',
+                      'preview_size' => 'thumbnail',
+                      'library' => 'all',
+                      'min_width' => '',
+                      'min_height' => '',
+                      'min_size' => '',
+                      'max_width' => '',
+                      'max_height' => '',
+                      'max_size' => '',
+                      'mime_types' => ''
+                  ),
+                  array(
                       'key' => 'field_591250b950da5',
                       'label' => 'Teaser Text',
                       'name' => 'teaser_text',
