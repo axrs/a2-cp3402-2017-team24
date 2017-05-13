@@ -7,11 +7,11 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
 
 require_once('wp-extensions.php');
 
-function my_acf_google_map_api( $api )
+function my_acf_google_map_api($api)
 {
     $api['key'] = 'AIzaSyAAFdy6HjA3FwsSAniy2Znro161tBK2t2M';
     return $api;
-};
+}
 
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
@@ -25,7 +25,6 @@ if (!class_exists('Timber')) {
     });
 
     return;
-
 }
 
 Timber::$dirname = array('templates', 'views');
@@ -61,7 +60,7 @@ class StarterSite extends TimberSite
         $context['site_options'] = get_fields('options');
         // Other menu items
         $locations = get_nav_menu_locations();
-        $menus = array('footer_right_menu', 'footer_middle_menu', 'footer_left_menu');
+        $menus = array('main_menu', 'footer_right_menu', 'footer_middle_menu', 'footer_left_menu');
         foreach ($menus as $m) {
             if ($locations[$m]) {
                 $context[$m] = new TimberMenu($m);
