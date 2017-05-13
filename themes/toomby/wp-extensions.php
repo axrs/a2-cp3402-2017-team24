@@ -39,7 +39,17 @@ function create_post_types()
                 'singular_name' => __('Division')
             ),
             'public' => true,
-            'has_archive' => true,
+            'has_archive' => false,
+        )
+    );
+    register_post_type('staff',
+        array(
+            'labels' => array(
+                'name' => __('Staff'),
+                'singular_name' => __('Staff')
+            ),
+            'public' => true,
+            'has_archive' => false,
         )
     );
 }

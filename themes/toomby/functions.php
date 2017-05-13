@@ -1,6 +1,19 @@
 <?php
 
-include_once('wp-extensions.php');
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    // Include vendor files if they exist (only required for dist)
+    include_once(__DIR__ . '/vendor/autoload.php');
+}
+
+require_once('wp-extensions.php');
+
+function my_acf_google_map_api( $api )
+{
+    $api['key'] = 'AIzaSyAAFdy6HjA3FwsSAniy2Znro161tBK2t2M';
+    return $api;
+};
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 if (!class_exists('Timber')) {
     add_action('admin_notices', function () {
@@ -12,6 +25,7 @@ if (!class_exists('Timber')) {
     });
 
     return;
+
 }
 
 Timber::$dirname = array('templates', 'views');

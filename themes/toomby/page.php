@@ -21,8 +21,10 @@
  * @since    Timber 0.1
  */
 
+include_once("ToombyPost.php");
+
 $context = Timber::get_context();
-$post = new TimberPost();
+$post = new ToombyPost();
 $context['post'] = $post;
 
-Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
+Timber::render(array('page-' . $post->post_name . '.twig', 'page.twig'), $context);

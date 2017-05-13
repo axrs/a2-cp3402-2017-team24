@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{% include "sections/hero.twig" %}
+<section class="about-us">
+    <div class="row">
+        {% if post.hasHero == false %}
+        <h1>{{ post.title }}</h1>
+        {% endif %}
+        <div class="{% if post.image %} large-8 {% endif %} columns">
+            {{ post.content }}
+        </div>
+        {% if post.image %}
+        <div class="large-4 columns">
+            {{ post.content }}
+        </div>
+        {% endif %}
+    </div>
+</section>
+<section class="our-goals">
+    <div class="row">
+        <h2>Our Vision, Mission & Values</h2>
+
+        {% for v in site_options.values %}
+        <div class="large-6 columns goal">
+            <h3>{{ v.title }}</h3>
+            {{ v.description | wpautop }}
+        </div>
+        {% endfor %}
+
+    </div>
+</section>
+{% include "sections/other-staff.twig" with {'title': "Meet Our Staff", 'staff' : post.allStaff} %}
+{% endblock %}
+
