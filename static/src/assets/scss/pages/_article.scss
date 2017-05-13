@@ -1,27 +1,56 @@
 .article-hero {
-    background: url('https://www.placehold.it/1920x320') 50% no-repeat;
-    background-size: cover;
-    height: $hero-height;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    h1,
-    p {
-        color: $white;
-        text-shadow: $hero-text-shadow;
-    }
+  background: url('https://www.placehold.it/1920x320') 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1,
+  p {
+    color: $white;
+    text-shadow: $hero-text-shadow;
+  }
 }
+
 .article-content {
-    p {
-        padding-bottom: $spacing-small;
+  p {
+    padding-bottom: $spacing-small;
+  }
+
+  figure {
+    float: left;
+    margin: 0 $spacing-large $spacing-large;
+    border: 4px solid #fefefe;
+    border-radius: 0;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 4%, .2);
+    padding: $spacing-small;
+
+    &.alignright {
+      float: right;
+      margin-right: 0;
     }
-    img {
-        display: inline;
-        float: left;
-        margin-right: $spacing-large;
-        margin-bottom: $spacing-large;
-        max-width: 40%;
-        height: auto;
+
+    &.aligncenter {
+      display: block;
+      float: none;
     }
+
+    &.alignleft {
+      margin-left: 0;
+    }
+
+    figcaption {
+      margin-top: $spacing-medium;
+      font-size: $small-font-size;
+      text-align: center;
+    }
+
+    @media print, screen and (max-width: 40em) {
+      float: none !important;
+      margin: $spacing-large auto !important;
+    }
+
+  }
 }
+
