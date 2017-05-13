@@ -1,0 +1,19 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+<div class="home hero" style="background-image: url('{{TimberImage(site_options.primary_hero_background).src}}')">
+    <div class="row">
+        <div class="medium-8 medium-centered column">
+            <img src="{{TimberImage(site_options.primary_logo).src}}">
+            <h1>{{site_options.welcome_message}}</h1>
+            <p>{{site_options.description}}</p>
+        </div>
+    </div>
+</div>
+
+{% include "sections/image-card.twig" with {'posts': site_options.posts} %}
+
+{% include "sections/article-card.twig" with {'articles': post.articles()} %}
+
+{% endblock %}
