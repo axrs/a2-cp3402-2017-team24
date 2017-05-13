@@ -29,13 +29,14 @@ if (function_exists('acf_add_options_page')) {
 }
 
 include_once('additional_sections.php');
+include_once('article.php');
 include_once('contact_details.php');
 include_once('course_units.php');
 include_once('disclaimer.php');
 include_once('frequently_asked_questions.php');
 include_once('hero.php');
 include_once('social_media_links.php');
-include_once('article.php');
+include_once('sponsor.php');
 include_once('staff.php');
 include_once('values.php');
 include_once('homepage.php');

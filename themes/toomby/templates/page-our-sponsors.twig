@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{% include "sections/hero.twig" %}
+<section class="sponsors">
+
+    <div class="row">
+        {% if post.hasHero == false %}
+        <h1>{{ post.title }}</h1>
+        {% endif %}
+        <div class="{% if post.image %} large-8 {% endif %} columns">
+            {{ post.content }}
+        </div>
+    </div>
+
+    {% for sponsor in post.sponsors %}
+    <div class="row sponsor section">
+        <div class="columns">
+            <h2>{{ sponsor.title }}</h2>
+        </div>
+        <div class="large-4 medium-12 columns">
+            <img src="{{ TimberImage(sponsor.logo).src | resize(300) }}" alt="{{ sponsor.title }}">
+        </div>
+        <div class="large-4 medium-12 columns">
+            {{ sponsor.content | wpautop }}
+        </div>
+        <div class="large-4 medium-12 columns">
+            {% include "sections/sponsor-details.twig" %}
+        </div>
+    </div>
+    {% endfor %}
+
+</section>
+{% endblock %}
+

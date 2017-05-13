@@ -25,7 +25,7 @@ if (function_exists('acf_add_local_field_group')):
                 'min_width' => '',
                 'min_height' => '',
                 'min_size' => '',
-                'max_width' => 1920,
+                'max_width' => '',
                 'max_height' => '',
                 'max_size' => '',
                 'mime_types' => '',
@@ -81,9 +81,9 @@ if (function_exists('acf_add_local_field_group')):
                 array(
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'article',
-                  ),
+                    'value' => 'post',
                 ),
+            ),
             array(
                 array(
                     'param' => 'post_type',
