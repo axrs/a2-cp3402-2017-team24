@@ -28,6 +28,7 @@ if (!class_exists('Timber')) {
 }
 
 Timber::$dirname = array('templates', 'views');
+require_once('ToombyPost.php');
 
 class StarterSite extends TimberSite
 {
@@ -56,8 +57,11 @@ class StarterSite extends TimberSite
 
     function add_to_context($context)
     {
+        $context['site'] = $this;
         $context['menu'] = new TimberMenu();
         $context['site_options'] = get_fields('options');
+        $context['post'] = new ToombyPost();
+
         // Other menu items
         $locations = get_nav_menu_locations();
         $menus = array('main_menu', 'footer_right_menu', 'footer_middle_menu', 'footer_left_menu');
@@ -66,7 +70,6 @@ class StarterSite extends TimberSite
                 $context[$m] = new TimberMenu($m);
             }
         }
-        $context['site'] = $this;
         return $context;
     }
 
