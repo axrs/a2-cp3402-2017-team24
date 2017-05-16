@@ -29,6 +29,7 @@
             </div>
         </div>
     </section>
+    {% include "sections/files.twig" %}
     {% include "sections/faq.twig" %}
     {% for section in post.get_field('sections') %}
     {% include "sections/generic.twig" with {'section': section} %}
