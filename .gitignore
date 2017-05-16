@@ -7,3 +7,6 @@ dist
 *.swp
 uploads/*
 languages/
+upgrade/
+toomby.zip
+
