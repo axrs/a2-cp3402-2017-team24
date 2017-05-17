@@ -40,9 +40,9 @@
       font-weight: bold;
     }
   }
-  .image.card.preview{
+  .image.card.preview {
     height: 100%;
-    img{
+    img {
       height: inherit;
     }
   }
@@ -54,6 +54,27 @@
     h4 {
       font-size: $font-size-content;
       font-weight: bold;
+    }
+  }
+
+  .files {
+
+    &+ section {
+      margin-top: 0 !important;
+    }
+
+    h4 {
+      text-align: center;
+      margin-bottom: $spacing-large;
+    }
+
+    .attachment {
+      .thumbnail {
+
+        &:last-of-type {
+          margin-bottom: $spacing-large;
+        }
+      }
     }
   }
 }
