@@ -7,6 +7,27 @@ if (function_exists('acf_add_local_field_group')):
         'title' => 'Clinic',
         'fields' => array(
             array(
+                'key' => 'field_591692bafce86',
+                'label' => 'Order Priority',
+                'name' => 'priority',
+                'type' => 'number',
+                'instructions' => 'The clinic priority (used to change the display order on the home and clinic\'s page). The order is ascending.',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => 10,
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'min' => '',
+                'max' => '',
+                'step' => '',
+            ),
+            array(
                 'key' => 'field_591d6d2403ad5',
                 'label' => 'Courses',
                 'name' => 'courses',
