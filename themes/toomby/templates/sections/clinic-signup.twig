@@ -2,19 +2,18 @@
     <div class="row">
 
         <div class="columns">
-            {% if contact.type == "error" %}
+            {% if course_form.type == "error" %}
             <div class="callout warning">
-                <h5>{{ contact.message }}</h5>
+                <h5>{{ course_form.message }}</h5>
             </div>
-            {% elseif contact.type == "success" %}
+            {% elseif course_form.type == "success" %}
             <div class="callout success">
-                <h5>{{ contact.message }}</h5>
+                <h5>{{ course_form.message }}</h5>
             </div>
             {% endif %}
-
-            <h4>Register or enroll in one of our courses</h4>
         </div>
-        {% if contact.type != "success" %}
+        {% if course_form.type != "success" %}
+        <h4>Register or enroll in one of our courses</h4>
         <form id="clinic_form" method="post" action="{{ post.link }}#clinic_form">
             <div class="medium-6 columns">
                 <fieldset>
@@ -33,7 +32,7 @@
                     <label for="clinic_participation_register">Register</label>
                     <label>
                         Course
-                        <select id="clinic_course" name="clinic_name" required>
+                        <select id="clinic_course" name="clinic_course" required>
                             <option disabled selected>Select a Course</option>
                             {% for course in post.get_field('courses') %}
                             <option>{{ course.title }} {% if course.duration %}({{ course.duration }}){% endif %}
