@@ -28,6 +28,30 @@ if (function_exists('acf_add_local_field_group')):
                 'step' => '',
             ),
             array(
+                'key' => 'field_5912507750da3',
+                'label' => 'Image',
+                'name' => 'image',
+                'type' => 'image',
+                'instructions' => 'The primary image for the clinic, used to generate thumbnails on other pages',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => ''
+                ),
+                'return_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => ''
+            ),
+            array(
                 'key' => 'field_591d6d2403ad5',
                 'label' => 'Courses',
                 'name' => 'courses',
