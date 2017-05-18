@@ -1,8 +1,8 @@
 .clinic {
-
+  display: block;
   .title {
     display: block;
-    margin-top: $spacing-large;
+    margin-top: $spacing-small;
     background-color: $color-grey-box-background;
     padding: $spacing-small;
     color: $color-white;
@@ -15,7 +15,6 @@
 
       span {
         float: right;
-        margin-right: 1rem;
         font-weight: normal;
       }
     }
