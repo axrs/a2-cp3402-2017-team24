@@ -1,8 +1,9 @@
 .clinic {
   display: block;
+
   .title {
     display: block;
-    margin-top: $spacing-small;
+    margin-top: $spacing-medium;
     background-color: $color-grey-box-background;
     padding: $spacing-small;
     color: $color-white;
@@ -22,5 +23,9 @@
 
   .details {
     margin: $spacing-medium 0;
+  }
+
+  img {
+    margin-bottom: $spacing-medium;
   }
 }
