@@ -2,7 +2,8 @@
 
 if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     // Include vendor files if they exist (only required for dist)
-    include_once(__DIR__ . '/vendor/autoload.php');
+    require_once(__DIR__ . '/vendor/autoload.php');
+    $timber = new \Timber\Timber();
 }
 
 require_once('wp-extensions.php');
