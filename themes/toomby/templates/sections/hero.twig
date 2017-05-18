@@ -6,10 +6,12 @@
 >
     <div class="row">
         <h1>{{ post.title }}</h1>
+        {% if post.hero_description or post.custom.author ort s post.hero_subtitle %}
         <div class="medium-9 medium-centered columns box">
             <p class="lead">{{ post.custom.author ? "By: #{post.custom.author}" : post.hero_subtitle }}</p>
             {{ post.hero_description | wpautop }}
         </div>
+        {% endif %}
     </div>
 </section>
 {% endif %}
