@@ -141,9 +141,10 @@ acf_add_local_field_group(array (
 					),
 					'post_type' => array (
 						0 => 'division',
-						1 => 'post',
-						2 => 'article',
-						3 => 'page',
+						1 => 'clinic',
+						2 => 'post',
+						3 => 'article',
+						4 => 'page',
 					),
 					'taxonomy' => array (
 					),
