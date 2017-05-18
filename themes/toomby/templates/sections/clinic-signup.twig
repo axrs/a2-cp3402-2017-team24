@@ -1,0 +1,63 @@
+<section class="clinic-form section box">
+    <div class="row">
+
+        <div class="columns">
+            {% if contact.type == "error" %}
+            <div class="callout warning">
+                <h5>{{ contact.message }}</h5>
+            </div>
+            {% elseif contact.type == "success" %}
+            <div class="callout success">
+                <h5>{{ contact.message }}</h5>
+            </div>
+            {% endif %}
+
+            <h4>Register or enroll in one of our courses</h4>
+        </div>
+        {% if contact.type != "success" %}
+        <form id="clinic_form" method="post" action="{{ post.link }}#clinic_form">
+            <div class="medium-6 columns">
+                <fieldset>
+                    <legend>I wish to</legend>
+                    <input type="radio"
+                           name="clinic_participation"
+                           value="enroll"
+                           id="clinic_participation_enroll"
+                           required>
+                    <label for="clinic_participation_enroll">Enroll</label>
+                    <input type="radio"
+                           name="clinic_participation"
+                           value="register"
+                           id="clinic_participation_register"
+                           required>
+                    <label for="clinic_participation_register">Register</label>
+                    <label>
+                        Course
+                        <select id="clinic_course" name="clinic_name" required>
+                            <option disabled selected>Select a Course</option>
+                            {% for course in post.get_field('courses') %}
+                            <option>{{ course.title }} {% if course.duration %}({{ course.duration }}){% endif %}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </label>
+                </fieldset>
+            </div>
+
+            <div class="medium-6 columns">
+                <fieldset>
+                    <legend>Your Details</legend>
+                    <label for="clinic_name">Name:</label>
+                    <input type="text" id="clinic_name" name="clinic_name" required>
+                    <label for="clinic_email">Email:</label>
+                    <input type="text" id="clinic_email" name="clinic_email" required>
+                    <label for="clinic_phone">Phone:</label>
+                    <input type="text" id="clinic_phone" name="clinic_phone" required>
+                </fieldset>
+                <input type="submit" name="submitted" class="expanded button">
+            </div>
+
+        </form>
+        {% endif %}
+    </div>
+</section>
