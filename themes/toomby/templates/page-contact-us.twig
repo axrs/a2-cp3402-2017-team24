@@ -62,7 +62,7 @@
                 {% if site_options.phone_numbers %}
                 <dt>Phone Numbers:</dt>
                 <dd>
-                    {% for number in site_options.phone_numbers%}
+                    {% for number in site_options.phone_numbers %}
                     <strong>{{number.name}}:</strong> {{number.phone}}<br>
                     {% endfor %}
                 </dd>
@@ -80,18 +80,8 @@
         </div>
 
         <script>
-            var googleMapsInfo = {
-            {
-                site_options.google_map | json_encode()
-            }
-            }
-            ;
-            var siteInfo = {
-            {
-                site | json_encode()
-            }
-            }
-            ;
+            var googleMapsInfo = {{ site_options.google_map | json_encode()}};
+            var siteInfo = {{ site | json_encode()}};
             var lat = Number(googleMapsInfo.lat);
             var lng = Number(googleMapsInfo.lng);
             var address = googleMapsInfo.address;
@@ -120,13 +110,12 @@
                     map: map
                 });
 
-                marker.addListener('click', function () {
+                marker.addListener('click', function() {
                     infowindow.open(map, marker);
                 });
             }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAFdy6HjA3FwsSAniy2Znro161tBK2t2M&callback=initMap"
-                async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAFdy6HjA3FwsSAniy2Znro161tBK2t2M&callback=initMap" async defer></script>
         {% endif %}
     </div>
 </section>

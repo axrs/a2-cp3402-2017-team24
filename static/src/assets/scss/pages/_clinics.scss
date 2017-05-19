@@ -1,0 +1,31 @@
+.clinic {
+  display: block;
+
+  .title {
+    display: block;
+    margin-top: $spacing-medium;
+    background-color: $color-grey-box-background;
+    padding: $spacing-small;
+    color: $color-white;
+
+    h3 {
+      margin-bottom: 0;
+      font-size: $font-size-subtitle;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      span {
+        float: right;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .details {
+    margin: $spacing-medium 0;
+  }
+
+  img {
+    margin-bottom: $spacing-medium;
+  }
+}

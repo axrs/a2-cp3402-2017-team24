@@ -53,6 +53,16 @@ function create_post_types()
             'has_archive' => false,
         )
     );
+    register_post_type('clinic',
+        array(
+            'labels' => array(
+                'name' => __('Clinics'),
+                'singular_name' => __('Clinic')
+            ),
+            'public' => true,
+            'has_archive' => false,
+        )
+    );
     register_post_type('staff',
         array(
             'labels' => array(

@@ -5,14 +5,20 @@
         <div class="columns">
             <h4>Download Course Related Files</h4>
         </div>
-        <div class="small-up-3 medium-up-6 large-up-6 attachment">
+        <div class="small-up-3 medium-up-6 large-up-6 attachment" data-equalizer>
             {% for file in post.get_field('files') %}
             {% for f in file %}
             {% set fa = TimberImage(f) %}
-            <div class="column thumbnail">
-                <a href="{{ fa.guid }}" title="Download {{ fa.title }}">
-                    <img src="{{ fa.src | resize(200) }}"></a>
-            </div>
+            {% if fa.title %}
+              <div class="column thumbnail" data-equalizer-watch>
+                  <a href="{{ fa.guid }}" title="Download {{ fa.title }}">
+                      <img src="{{ file.pdf_thumbnail }}" height=200 width=200>
+                      <p>
+                        <strong>{{ fa.title }}</strong>
+                      </p>
+                  </a>
+              </div>
+            {% endif %}
             {% endfor %}
             {% endfor %}
         </div>
