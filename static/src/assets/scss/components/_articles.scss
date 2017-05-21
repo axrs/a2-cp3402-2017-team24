@@ -3,59 +3,66 @@ $news-feature-article-height: 600px;
 $news-article-height: $news-feature-article-height / 2;
 
 .articles {
-    .article {
-        height: $news-article-height;
-        text-align: center;
+  .article, .feature {
+    text-align: center;
 
-        .date {
-            font-size: $font-size-subtext;
-            margin-bottom: $spacing-small;
-        }
-
+    .title {
+      .date {
+        float: right;
+      }
+      a {
         h1 {
-            text-align: left;
-            font-size: $font-size-header;
-            margin-bottom: 0;
+          float: left;
+          text-align: left;
+          font-size: $font-size-header;
+          margin-bottom: $spacing-small;
+          color: $color-link !important;
         }
-
-        img {
-            margin-bottom: $spacing-small;
-            height: auto;
-            max-height: 200px;
-        }
-
-        p {
-            text-align: left;
-            font-size: $font-size-content;
-        }
+      }
     }
 
-    .feature {
-        height: $news-feature-article-height;
-        text-align: center;
-
-        img {
-            margin-bottom: $spacing-medium;
-            width: 100%;
-            height: auto;
-            max-height: 50%;
-        }
-
-        h1 {
-            text-align: left;
-            font-size: $font-size-title;
-            margin-bottom: $spacing-large;
-        }
-
-        p {
-            text-align: left;
-            font-size: $font-size-content;
-            margin-bottom: $spacing-small;
-        }
-
-        .read-more {
-            font-size: $font-size-subtext;
-            font-weight: bold;
-        }
+    img {
+      margin-bottom: $spacing-medium;
+      height: auto;
+      max-height: 200px;
     }
+
+    p {
+      clear: both;
+      text-align: left;
+      font-size: $font-size-content;
+    }
+  }
+
+  .feature {
+    text-align: center;
+
+    img {
+      margin-bottom: $spacing-medium;
+      width: 100%;
+      height: auto;
+      min-height: 25rem;
+    }
+
+    h1 {
+      text-align: left;
+      font-size: $font-size-title;
+      margin-bottom: $spacing-large;
+    }
+
+    p {
+      text-align: left;
+      font-size: $font-size-content;
+      margin-bottom: $spacing-small;
+    }
+
+  }
+  .feature, .article {
+    .read-more {
+      display: block;
+      text-align: right;
+      font-size: $font-size-subtitle;
+      font-weight: bold;
+    }
+  }
 }

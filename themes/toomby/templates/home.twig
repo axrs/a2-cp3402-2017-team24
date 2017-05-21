@@ -1,19 +1,43 @@
 {% extends "base.twig" %}
 
 {% block content %}
+{% include "sections/hero.twig" %}
+<section class="news">
 
-<div class="home hero" style="background-image: url('{{TimberImage(site_options.primary_hero_background).src}}')">
-    <div class="row">
-        <div class="medium-8 medium-centered column">
-            <img src="{{TimberImage(site_options.primary_logo).src}}">
-            <h1>{{site_options.welcome_message}}</h1>
-            <p>{{site_options.description}}</p>
+    {% if post.hasHero == false %}
+    <h1>{{ post.title }}</h1>
+    {% endif %}
+
+    <section class="articles">
+        <div class="row">
+
+            {% for article in posts %}
+            {% if loop.index == 1 %}
+            {% include "sections/news-featured-article.twig" with {'article': article} %}
+            {% else %}
+            {% include "sections/news-article.twig" with {'article': article} %}
+            {% endif %}
+            {% endfor %}
+
         </div>
-    </div>
-</div>
+    </section>
 
-{% include "sections/image-card.twig" with {'posts': site_options.posts} %}
+    <section class="pagination">
+        <div class="row">
+            {% if pagination.prev %}
+            <a href="{{page.link}}" class="hollow button large">Previous</a>
+            {% endif %}
 
-{% include "sections/article-card.twig" with {'articles': post.articles()} %}
+            {% for page in pagination.pages %}
+            <a href="{{page.link}}" class="button large">{{page.title}}</a>
+            {% endfor %}
+
+            {% if pagination.next %}
+            <a href="{{page.link}}" class="hollow button large">Next</a>
+            {% endif %}
+        </div>
+    </section>
+
+</section>
 
 {% endblock %}
