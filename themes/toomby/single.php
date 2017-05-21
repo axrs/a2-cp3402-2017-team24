@@ -8,7 +8,6 @@
  * @subpackage  Timber
  * @since    Timber 0.1
  */
-
 include_once("ToombyPost.php");
 $context = Timber::get_context();
 $post = new ToombyPost();
@@ -59,7 +58,6 @@ if (isset($_POST['submitted'])) {
     //Expose the contact form results as part of the context
     $context['course_form'] = $course_form;
 }
-
 
 if (post_password_required($post->ID)) {
     Timber::render('single-password.twig', $context);
