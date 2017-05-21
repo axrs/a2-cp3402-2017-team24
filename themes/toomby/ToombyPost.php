@@ -84,7 +84,7 @@ class ToombyPost extends TimberPost
         $exclude = ($exclude_self) ? array($this->ID) : array();
 
         $article_query = array(
-            'post_type' => 'article',
+            'post_type' => 'post',
             'orderby' => 'desc',
             'limit' => $limit,
             'post__not_in' => $exclude
