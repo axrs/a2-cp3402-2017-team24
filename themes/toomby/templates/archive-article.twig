@@ -1,6 +1,5 @@
 {% extends "base.twig" %}
 
-
 {% block content %}
 
 <section class="news">
@@ -14,6 +13,7 @@
 
           {% for article in posts %}
 
+            {{ article | print_r }}
             {% if featured %}
               {% include "sections/news-featured-article.twig" %}
               {% set featured = false %}

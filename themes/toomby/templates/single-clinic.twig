@@ -12,9 +12,9 @@
         </div>
     </div>
     <div class="row" data-equalizer data-equalize-on="medium">
-
+        {% set len = post.get_field('courses') | length %}
         {% for course in post.get_field('courses') %}
-        <div class="clinic medium-6 column" data-equalizer-watch>
+        <div class="clinic {% if len > 1 %}medium-6{% endif %} column" data-equalizer-watch>
             <div class="title">
                 <h3>{{ course.title }}<span>{{ course.duration }}</span></h3>
             </div>
