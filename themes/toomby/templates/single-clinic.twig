@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block content %}
+{% include "sections/hero.twig" %}
+<section class="clinics">
+    <div class="row">
+        <div class="column">
+            {% if post.hasHero == false %}
+            <h1>{{ post.title }}</h1>
+            {% endif %}
+            {{ post.content | wpautop }}
+        </div>
+    </div>
+    <div class="row" data-equalizer data-equalize-on="medium">
+        {% set len = post.get_field('courses') | length %}
+        {% for course in post.get_field('courses') %}
+        <div class="clinic {% if len > 1 %}medium-6{% endif %} column" data-equalizer-watch>
+            <div class="title">
+                <h3>{{ course.title }}<span>{{ course.duration }}</span></h3>
+            </div>
+            <div class="details">
+                {% if course.image %}
+                <img class="small-4 column" src="{{ TimberImage(course.image).src | resize(300) }}"
+                     alt="{{ clinic.title }}">
+                {% endif %}
+                <div class="description {% if course.image %} small-8 {% else %} small-12 {% endif %} column">
+                    {{ course.description | wpautop }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</section>
+{% include "sections/clinic-signup.twig" %}
+{% endblock %}
+

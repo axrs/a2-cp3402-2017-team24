@@ -37,6 +37,18 @@ class ToombyPost extends TimberPost
         return $this->query($related_query);
     }
 
+    public function clinics()
+    {
+        $query = array(
+            'post_type' => 'clinic',
+            'orderby' => 'meta_value_num',
+            'meta_key' => 'priority',
+            'order' => 'asc',
+            'limit' => 100,
+        );
+        return $this->query($query);
+    }
+
     public function sponsors()
     {
         $query = array(
@@ -69,10 +81,10 @@ class ToombyPost extends TimberPost
 
     public function articles($limit = 3, $exclude_self = false)
     {
-      $exclude = ($exclude_self) ? array($this->ID) : array();
+        $exclude = ($exclude_self) ? array($this->ID) : array();
 
         $article_query = array(
-            'post_type' => 'article',
+            'post_type' => 'post',
             'orderby' => 'desc',
             'limit' => $limit,
             'post__not_in' => $exclude
